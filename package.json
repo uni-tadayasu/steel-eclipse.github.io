@@ -1,8 +1,8 @@
 {
-  "name": "steel-eclipse-fusion-records",
-  "version": "1.0.0",
+  "name": "steel-eclipse-reforged-records",
+  "version": "2.0.0",
   "private": true,
-  "description": "40 original fusion mechs, 48 stages, offline solo and online coop/PvP for 2-4 pilots",
+  "description": "Original handcrafted mech browser action game: 40 frames, 48 operations, coop and PvP",
   "license": "UNLICENSED",
   "engines": {"node": ">=20"},
   "scripts": {"start": "node server.js", "check": "node --check server.js"}

@@ -12,7 +12,7 @@ if errorlevel 1 (
  exit /b 1
 )
 echo ===========================================================
-echo  STEEL ECLIPSE / FUSION RECORDS / LIVE ROOM SERVER
+echo  STEEL ECLIPSE / REFORGED RECORDS / LIVE ROOM SERVER
  echo ===========================================================
 echo.
 echo  PC browser : http://localhost:3000/

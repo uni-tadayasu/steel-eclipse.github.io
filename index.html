@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="theme-color" content="#171b1b">
-<meta name="description" content="STEEL ECLIPSE FUSION EDITION — 歴代ロボット作品の設計意匠を再解釈した40機のオリジナル融合メカ、48戦場を自由に遊べる3Dアクション。全機体初期解放、PC・スマホ協力対戦マルチ、強化・ボス戦・セーブ搭載。">
+<meta name="description" content="STEEL ECLIPSE REFORGED — 独自の手作り機動兵器40機・48作戦を収録したロボット3Dアクション。全機体初期開放。協力・対戦・強化・保存、PC・スマホ対応。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2264%22%20height%3D%2264%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20fill%3D%22%23233c36%22%2F%3E%3Cpath%20d%3D%22M8%208h48v48H8z%22%20fill%3D%22none%22%20stroke%3D%22%23cf9b70%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M19%2022h17v5H24v6h10v5H24v2h13v5H19z%22%20fill%3D%22%23f4e9d6%22%2F%3E%3Cpath%20d%3D%22M43%2019v25%22%20stroke%3D%22%23cf9b70%22%20stroke-width%3D%224%22%2F%3E%3C%2Fsvg%3E" type="image/svg+xml">
-<title>STEEL ECLIPSE — 機甲戦線 | FUSION ARMORY 40</title>
+<title>STEEL ECLIPSE : REFORGED | 機甲設計室 — 全40機・48作戦・協力・対戦</title>
 <style>
 :root{--bg:#07101d;--panel:rgba(8,19,34,.90);--edge:rgba(121,204,238,.23);--sky:#67dbff;--gold:#ffce79;--text:#e8f4ff;--muted:#8a9eb3;--bad:#ff6275;--good:#7affc5}
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;user-select:none;-webkit-user-select:none}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.44}
@@ -44,22 +44,131 @@ body{font-family:'Yu Gothic','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;backg
 #multiplayer .roomPanel .netButtonRow .btn.wide{width:auto;min-width:200px;flex:1}
 #multiplayer .netMain .netButtonRow{align-items:center}
 @media(max-width:720px){.network-layout .netMain{padding:16px}.netForm .roomJoin{flex-direction:row}#roomMembers{font-size:11px}.identity.renameBtn{padding-left:0;border-left:0}#battleHUD .hudTop{top:7px;left:6px;right:6px}#battleHUD .bottomHUD{left:7px;right:7px}}
+
+/* ===========================================================
+   STEEL ECLIPSE / REFORGED — identity manual
+   Art direction: 1970s naval workshop logbooks meets test-pilot
+   instrumentation. No glassmorphism/neon template UI.
+   Every rule authored for this project.
+   =========================================================== */
+:root{--bg:#101716;--panel:#eee7da;--edge:#aaa28d;--sky:#aabf9d;--gold:#d5b67b;--text:#f3ebdc;--muted:#a8aea1;--good:#94bca4;--bad:#d56f55;--oxide:#b75e42;--ink:#233b33;--paper:#eee8db;--reed:#8b9a81}
+html,body{background:#0c1514;font-family:"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;letter-spacing:.012em}
+#menu{background:linear-gradient(90deg,rgba(9,18,16,.92) 0%,rgba(9,18,16,.47) 28%,rgba(10,24,23,.08) 51%,rgba(10,19,16,.38) 74%,rgba(13,22,20,.91) 100%),repeating-linear-gradient(90deg,transparent 0 109px,rgba(161,163,140,.06) 110px)}
+#menu:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:1;background-image:repeating-linear-gradient(0deg,transparent 0 2px,#e8d1a016 3px),radial-gradient(circle at 13% 25%,#d8bd8c44 0 1px,transparent 2px);background-size:auto,7px 7px}
+#menu>.shell{position:relative;z-index:2;max-width:1590px;padding:28px clamp(17px,2.6vw,43px) 28px}
+#world{background:#101b1b}#scanlines{opacity:.06}#vignette{opacity:.62}
+#atmosphere{position:fixed;inset:0;pointer-events:none;z-index:3;opacity:.77}
+.topbar{border:0;border-bottom:1px solid #877e66;position:relative;gap:18px;padding:2px 0 18px;align-items:center}
+.topbar:after{content:"RESTRICTED / HANGAR 07  •  EXPERIMENTAL MECHANICAL RECORDS";position:absolute;right:2px;bottom:-6px;background:#172621;padding:0 11px;color:#c8b89c;letter-spacing:1.5px;font:8px/12px Consolas,monospace}
+.brand{gap:15px}.brand-icon{transform:none;width:58px;height:65px;box-shadow:none;border:1px solid #c2ab81;display:grid;place-items:center;background:#1d3a32;position:relative}
+.brand-icon:before,.brand-icon:after{content:"";position:absolute;inset:5px;border:1px solid #aa9067;opacity:.6}.brand-icon:after{inset:10px;border-style:dotted;opacity:.35}
+.brand-icon span{transform:none;font-family:Georgia,serif;font-size:25px;color:#f3dfb8;letter-spacing:-2px}
+.brand h1{font:900 clamp(27px,3.15vw,49px)/.90 "Arial Narrow",Impact,"Helvetica Neue",sans-serif;color:#f0e4d0;letter-spacing:-.035em;font-stretch:condensed;text-transform:uppercase;text-shadow:1px 1px 0 #726551}
+.brand p{font-size:10px;letter-spacing:2.2px;margin-top:11px;color:#b0b5a6}
+.topinfo{gap:11px}.topinfo .chip{background:#202f2b;color:#dcc2a0;border:1px solid #7c816d;font:700 10px/1.2 Consolas,monospace;padding:8px 10px;letter-spacing:.7px;border-radius:0}
+.money{color:#edcc8b;font-family:Georgia,serif;font-size:23px;font-weight:750}.identity.renameBtn{border:1px solid #637266;border-left:4px solid #b97b55;background:#1c3129;padding:7px 12px!important;color:#ece0c8;max-width:174px;text-align:left}
+.identity.renameBtn b{display:block;margin-top:3px;color:#e9c994;white-space:nowrap;max-width:145px;overflow:hidden;text-overflow:ellipsis}
+.identity.renameBtn small{color:#bdbaa7;letter-spacing:.4px}
+.navtabs{margin:18px 0 12px;display:flex;align-items:center;gap:0;border-bottom:1px solid #7f8170;padding:0 0 9px;position:relative}
+.navtabs .tab{position:relative;border:0;border-left:1px solid #374c41;background:transparent;box-shadow:none;color:#adbaa8;padding:12px 20px 12px 19px;letter-spacing:1px;font-size:12px;font-weight:850;transition:background .16s}
+.navtabs .tab:hover{background:#36483e;color:#f3e9d5;transform:none}.navtabs .tab.active{background:#d8c4a4;color:#1b332c;border-color:#a78359;box-shadow:none}
+.navtabs .tab.active:after{content:"";position:absolute;left:0;bottom:-10px;width:100%;height:4px;background:#b86947}
+.navtabs .tab.multiTab{border:1px solid #c09d6f;margin-left:auto;background:#a96b4e;color:#fff1dd;box-shadow:inset 0 0 0 1px #ac8c67}
+.navtabs .tab.multiTab.active{background:#e3c394;color:#1b322d}
+.editionStrip{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:17px;color:#bdc4ad;padding:10px 0 10px 1px;border-bottom:1px dashed #4b574d;letter-spacing:1.3px;font-size:10px}
+.editionStrip strong{font:700 11px Consolas,monospace;color:#e3c38b}.editionStrip .stripThin{color:#889887;font-family:Consolas,monospace}
+.layout{grid-template-columns:minmax(280px,365px) minmax(0,1fr) minmax(265px,340px);gap:17px;min-height:590px;align-items:stretch}
+#garage>.layout>.panel{z-index:2}.panel{background:var(--paper);border:1px solid #b9af9c;border-left:4px solid #b85f42;color:var(--ink);box-shadow:5px 7px 0 #00000056,0 0 0 1px #e2dacc inset;padding:22px;backdrop-filter:none}
+.panel:before{height:0}.panel:after{content:"";position:absolute;top:0;right:0;width:34px;height:34px;clip-path:polygon(0 0,100% 100%,100% 0);background:#d0c7b2;opacity:.85;pointer-events:none}
+.panel h2{color:#2a3c35;font-size:20px;letter-spacing:0;font-weight:900;margin:6px 0 16px;border-bottom:1px solid #b7b2a4;padding-bottom:12px}
+.panel .eyebrow{color:#9b5239;font:750 10px/1.5 Consolas,monospace;letter-spacing:2px}.panel .desc,.panel .muted,.panel .footnote,.panel .small{color:#637166}
+.panel .line{background:#b7b0a0}.panel .section-kicker{color:#a16144}
+.mechanics{max-height:513px;gap:4px;scrollbar-color:#a9ac95 #e9e3d7}.mechcard{position:relative;background:rgba(250,247,239,.64);border:1px solid #b5b4a4;border-left:2px solid transparent;color:#2f4238;min-height:60px;padding:9px 8px;grid-template-columns:42px 1fr auto;transition:background .15s,border-color .15s;box-shadow:0 1px 0 #fff inset}
+.mechcard:hover{background:#f3e9d9;border-color:#b48b73;transform:translateX(1px)}.mechcard.active{background:#dfd8c6;border:1px solid #a7785e;border-left:4px solid #af543b;box-shadow:inset 0 0 0 1px #f6ece0}
+.mechmark{border:1px solid #9d8b70;background:none!important;color:#96644b!important;width:36px;height:41px;font:800 17px/1.0 Georgia,serif;clip-path:none;border-radius:0}
+.mechcard .mech-name{font-size:12px;letter-spacing:0;color:#283e36;font-weight:900}.mech-code{font-size:10px;color:#807b72;letter-spacing:.6px}
+.mechcard .owned{color:#517966;font:800 9px Consolas,monospace}.mechcard.active .owned{color:#a64e37}
+.filterInput{margin:7px 0 13px;font:800 10px Consolas,monospace;color:#696e5d}.filterInput input,.netForm input,.netForm select,.roomJoin input{background:#faf6ed;border:1px solid #aaa997;color:#263e32;border-radius:0;outline:0;padding:12px;width:100%;font-size:13px}
+.filterInput input:focus,.netForm input:focus,.netForm select:focus{box-shadow:0 0 0 2px #9c6e5144;border-color:#ab7153}
+.preview{min-height:535px;position:relative;overflow:visible;isolation:isolate;background:linear-gradient(180deg,rgba(9,27,25,.34),rgba(7,20,21,.03) 48%,rgba(13,24,22,.32));border:1px solid rgba(149,154,122,.44)}
+.preview:before{content:"";position:absolute;inset:13px;border:1px solid #a9a18c73;pointer-events:none;z-index:0;clip-path:polygon(0 0,18% 0,18% 4px,82% 4px,82% 0,100% 0,100% 100%,0 100%)}
+.preview:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,transparent 49.9%,#d6c5a124 50%,transparent 50.1%),linear-gradient(0deg,transparent 49.9%,#d6c5a124 50%,transparent 50.1%);background-size:46px 46px;pointer-events:none}
+.preview-head{top:18px;left:22px;background:rgba(230,219,198,.96);color:#283e33;border-left:5px solid #a95c40;padding:14px 17px 15px;min-width:min(75%,310px);box-shadow:4px 4px 0 #0b1615aa;max-width:80%}
+.preview-head:before{content:"TECHNICAL RECORD / 1:100";display:block;font:800 9px Consolas,monospace;color:#8e6f59;letter-spacing:1px;border-bottom:1px dashed #aea18b;padding-bottom:5px;margin-bottom:7px}
+.preview-head .eyebrow{color:#9b573e;font:700 10px Consolas,monospace;letter-spacing:1.4px}.preview-head .preview-name{font:900 clamp(26px,3vw,42px)/1.04 Georgia,"Yu Mincho",serif;color:#253c34;letter-spacing:-1px;text-shadow:none}
+.preview-head .muted{color:#53675b;font-size:10px;font-weight:800;letter-spacing:.6px}.preview-bottom{bottom:19px;left:17px;right:17px;align-items:flex-end}
+.preview-bottom .hint{color:#e7e4d8;font:700 11px/1.8 "Yu Gothic",sans-serif;text-shadow:0 1px 3px #000;background:rgba(22,35,30,.77);border-left:2px solid #c7a771;padding:9px 12px}
+.preview-bottom .chip{color:#f5e4c4;background:#263f35df;border:1px solid #bba276;border-radius:0;letter-spacing:.5px;white-space:nowrap}
+.preview .calibration{position:absolute;top:4%;right:3%;width:54px;height:100%;border-right:1px solid #acac8f55;background:repeating-linear-gradient(0deg,#c2ac884a 0 1px,transparent 1px 15px);clip-path:inset(2% 0 11% 91%);pointer-events:none}
+.preview .blueprintNo{position:absolute;top:22px;right:22px;color:#baa789;font:700 11px Consolas,monospace;letter-spacing:1.3px;text-align:right;line-height:1.9}
+.detail .desc{line-height:1.9;font-size:12px;min-height:70px}.statrow{margin:12px 0;grid-template-columns:50px 1fr 48px;font-size:11px}.track{background:#bbc4b2;height:5px;border-radius:0}.fill{background:#476a5e;box-shadow:none}.statrow b{font-family:Consolas,monospace;color:#203d31}
+.btn{border:1px solid #3c554b;background:#324f44;color:#f4ebd9;font-weight:900;letter-spacing:.5px;box-shadow:2px 2px 0 #07181160;border-radius:0;padding:11px 13px;transition:background .15s,transform .15s}
+.btn:hover:not(:disabled){background:#416a58;transform:translate(-1px,-1px);filter:none}.btn.goldbtn{background:#aa583e;border-color:#96563f}.btn.goldbtn:hover{background:#b9674b}.btn.alt{background:#eae3d5;border-color:#89998d;color:#254136}.btn.alt:hover{background:#d7decf}.btn.danger{background:#633c3c;border-color:#633c3c}
+#buyButton:disabled,#equipButton:disabled{background:#a4aba1;color:#fdf3e3;opacity:.83;border-color:#979f94}
+.sectorFilters{display:flex;gap:5px;flex-wrap:wrap;padding-bottom:16px}.sectorBtn{border:1px solid #b8ad99;background:#faf3e7;color:#596d62;padding:9px 12px;font:800 11px "Yu Gothic",sans-serif;cursor:pointer}.sectorBtn.active{background:#334d42;color:#f9ecd7}.sectorBtn:hover{border-color:#a55c43}
+.missiongrid{grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.mission{border:1px solid #a7a69b;border-bottom:4px solid #bda88a;background:#e8e5db;min-height:179px;padding:16px;color:#31463c;position:relative;box-shadow:inset 0 1px #f9f3e7}
+.mission.sector-1{background:#d9dfd8}.mission.sector-2{background:#dfe8e6}.mission.sector-3{background:#dbe0e5}.mission.sector-4{background:#e5dbdb}.mission.sector-5{background:#e4d5cb}
+.mission:after{content:"RECON LOG";position:absolute;left:14px;bottom:7px;color:#7d867e;font:7px Consolas,monospace;letter-spacing:2px}.mission:hover,.mission.selected{border-color:#af6143;box-shadow:4px 4px 0 #8c694e3a;transform:translate(-1px,-1px)}
+.mission .num{font:italic 57px/1 Georgia,serif;right:13px;top:7px;color:#8f7c6155}.mission h3{color:#233e34;font-size:14px;line-height:1.4;margin-top:18px}.mission .sub{color:#b0674a;font-size:9px;max-width:140px}.mission p{color:#5d6b61;font-size:11px}.mission .status{color:#466e58;margin:13px 0 10px;font-weight:800}
+.upcard,.record,.achieve{background:#f9f3e8;border:1px solid #b3ae9e;color:#293e34;box-shadow:inset 0 1px #fff}.upcard{position:relative;border-top:3px solid #778f7b}.upcard h3{color:#31483c}.upcard .bars span{background:#d0caba}.upcard .bars span.done{background:#678e76}.achieve.done{background:#dce4d3;color:#324c39}.record b{color:#3a5c4e}
+.helpgrid .panel h3{color:#a35b41}.helpgrid .panel p{color:#526658}.key{background:#dedfd2;border:1px solid #a9b1a1;border-bottom-width:3px;color:#273f34}
+.netMain h2{font:900 32px/1.0 Georgia,"Yu Mincho",serif;color:#2c4236}.netLead{font-size:13px;color:#526a5d;line-height:1.9}.netForm label{color:#4e6556;font-size:12px}.netStatus{border-left:4px solid #a95e42;background:#f9f2e3;color:#4a675b}.netAside{background:#dedfd2}.netAside p,.netAside .noteBox{color:#485f51}.roomCode strong{font:900 30px Georgia,serif;color:#a25b42}.roomMember{background:#f9f4e9;border:1px solid #bdb4a4}.roomMember b{color:#294638}
+.footnote{font-size:10px;color:#b5b9a8;letter-spacing:.15px}.panel .footnote{color:#72766b}.toast{border-radius:0!important;background:#23362fe8!important;color:#f4e7cc!important;border:1px solid #b6a67f!important;font-weight:750!important;letter-spacing:.6px}
+/* The shop-floor manual: functional (quality, audio, accessibility) rather than empty decoration. */
+#workshop{display:none}.studioLayout{display:grid;grid-template-columns:1.1fr .8fr;gap:18px}.studioLead{font:900 clamp(24px,3vw,42px)/1.1 Georgia,"Yu Mincho",serif;letter-spacing:-1px;color:#253e36;margin:12px 0 15px}.studioTag{display:inline-block;padding:4px 9px;background:#324e41;color:#f5e6c8;font:800 10px Consolas,monospace;letter-spacing:1px}.settingsGrid{display:grid;gap:11px}.settingRow{display:grid;grid-template-columns:minmax(150px,1fr) minmax(150px,210px);align-items:center;gap:16px;padding:15px;background:#f8f4eb;border:1px solid #c5bca8}.settingRow label{display:block;color:#334f42;font-weight:850}.settingRow p{font-size:11px;color:#708073;margin-top:5px}.settingRow select,.settingRow input[type=range]{width:100%;padding:9px;background:#eee9db;color:#293b30;border:1px solid #a5a797;accent-color:#b26445}.settingRow input[type=checkbox]{appearance:none;width:45px;height:24px;border:1px solid #7f9485;background:#d7d6c7;position:relative;cursor:pointer}.settingRow input[type=checkbox]:before{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;background:#fff3dd;box-shadow:1px 1px 1px #888}.settingRow input[type=checkbox]:checked{background:#567d67}.settingRow input[type=checkbox]:checked:before{left:23px}.workshopNote{font:12px/1.9 "Yu Gothic",sans-serif;color:#526a5d;border-left:4px solid #a96847;padding-left:15px;margin:17px 0}
+#battleHUD .hudpanel{background:linear-gradient(125deg,#172824eb,#101c1be8);color:#f4e7cf;border:1px solid #a0a18b7a;border-left:3px solid #cf945d;backdrop-filter:blur(7px)}
+.hudTop{top:18px;left:21px;right:21px;align-items:start}.hudpanel .eyebrow{color:#dab985;letter-spacing:1.4px;font-family:Consolas,monospace}.mission-hud{min-width:210px;border-left:3px solid #7ea993!important}.mission-hud h2{font-size:16px;letter-spacing:0;margin:3px 0 6px}.bar{background:#1b2a29;border:1px solid #60776a;height:10px}.bar div{background:linear-gradient(90deg,#6eaa8a,#c5d6a6)}.bar.health div{background:linear-gradient(90deg,#ad4d43,#e09c81)}.bar.energy div{background:linear-gradient(90deg,#b58b4b,#edca85)}
+.wepslot{background:rgba(19,35,31,.94);border:1px solid #8c997f76;color:#cad9c6;min-height:54px;padding:9px}.wepslot.active{background:#a56143;color:#fff3dd;border:1px solid #f0c396}.bossbar{background:#271d21e8;border:1px solid #c18a67;color:#f7e4c8}
+.reticle{width:38px;height:38px;opacity:.8;transition:transform .08s ease}.reticle span{inset:8px;border:1px solid #f5d7aa8a;border-radius:0;transform:rotate(45deg)}.reticle:before,.reticle:after{background:#e9cca0;box-shadow:0 0 6px #f4dc9a5d}.reticle.locking{transform:translate(-50%,-50%) scale(.77)}
+#hitCross{position:fixed;left:50%;top:50%;width:60px;height:60px;transform:translate(-50%,-50%);opacity:0;transition:opacity .09s;pointer-events:none}#hitCross:before,#hitCross:after{content:"";position:absolute;inset:0;border:2px solid transparent;transform:rotate(45deg)}#hitCross:before{border-top-color:#f9dca5;border-bottom-color:#f9dca5}#hitCross:after{border-left-color:#f9dca5;border-right-color:#f9dca5;inset:6px}#hitCross.visible{opacity:1}
+#comboCard{position:absolute;top:57%;left:50%;transform:translateX(-50%);color:#f8ddae;letter-spacing:2px;text-shadow:2px 2px 2px #071811;font:900 13px Consolas,monospace;opacity:0;transition:opacity .2s}#comboCard.visible{opacity:1}#comboCard strong{font:900 29px Georgia,serif}
+#battlePlace{position:absolute;left:22px;bottom:111px;color:#d9d8b8;font:800 10px/1.7 Consolas,monospace;letter-spacing:1px;background:#172721a8;padding:9px;border-left:2px solid #bd956c}
+#fpsStatus{position:absolute;right:25px;bottom:110px;font:700 10px Consolas,monospace;color:#a0b5a0;letter-spacing:1px;background:#152721a9;padding:6px 9px;opacity:.74}
+#specialGauge{position:absolute;bottom:74px;left:50%;transform:translateX(-50%);width:min(200px,40vw);height:4px;background:#152a26d9;border:1px solid #7d9079;opacity:.9}
+#specialGauge div{height:100%;width:0%;background:#cba16d;transition:width .12s}
+#battleHUD .mobBtn{border:1px solid #c5ab85;background:rgba(29,52,43,.94);color:#f6edd4;box-shadow:2px 3px 0 #0d1514;backdrop-filter:blur(4px)}#battleHUD .mobBtn.fire{background:rgba(154,77,51,.97);border:2px solid #eeb78c}
+#battleHUD .mobBtn:active{background:#bc8658}.joy{background:radial-gradient(circle,#34493d99 0 18%,#263a325e 19% 55%,#9ca88c75 56% 57%,transparent 59%);border:1px solid #b5be9a84}.joyknob{background:#899b87d4;border:2px solid #e4dac5;box-shadow:0 0 0 2px #21392d}
+#modalWrap .modal{background:#e9e0ce;color:#263e35;border:4px double #a79a80;box-shadow:9px 10px 0 #091715}.modal h2{color:#254238}.modal .eyebrow{color:#a85d42}.modal p{color:#4d5e53}.modal .resultline{border-color:#c2b6a1}
+@media(max-width:1240px){.layout{grid-template-columns:minmax(235px,320px) 1fr minmax(240px,310px);gap:10px}.panel{padding:15px}.missiongrid{grid-template-columns:repeat(3,1fr)}.brand h1{font-size:34px}}
+@media(max-width:1050px){.layout{grid-template-columns:1fr minmax(260px,330px);gap:10px}.layout>.panel:first-child{grid-column:1/-1;order:2}.layout>.preview{min-height:420px}.layout>.panel.detail{grid-column:2;grid-row:1}.mechanics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-height:210px}.mechcard{grid-template-columns:38px 1fr;gap:7px}.mechcard .owned{display:none}.mechcard .mech-name{font-size:11px}.preview-head .preview-name{font-size:32px}.studioLayout{grid-template-columns:1fr 1fr}}
+@media(max-width:790px){
+ #menu>.shell{padding:9px 12px 25px}.topbar{padding:9px 0 11px;flex-wrap:wrap;gap:9px}.topbar:after{display:none}.brand{gap:8px}.brand-icon{width:42px;height:47px;flex:0 0 auto}.brand-icon span{font-size:19px}.brand h1{font-size:27px;line-height:.95}.brand p{font-size:8px;letter-spacing:1px;margin-top:7px}.topinfo{width:100%;justify-content:space-between;gap:5px}.topinfo .chip{font-size:9px;padding:6px}.money{font-size:18px}.identity.renameBtn{border:1px solid #637266;padding:5px 7px!important;font-size:10px}.identity.renameBtn b{font-size:12px}.editionStrip{margin:6px 0 9px;font-size:9px;padding:5px 0;flex-wrap:wrap}.editionStrip .stripThin{display:none}
+ .navtabs{display:flex;gap:4px;flex-wrap:nowrap;overflow-x:auto;margin:8px 0 10px;scrollbar-width:none;white-space:nowrap;padding-bottom:7px}.navtabs::-webkit-scrollbar{display:none}.navtabs .tab{flex:0 0 auto;padding:10px 12px;font-size:11px;background:#203229;border:1px solid #4a5e4c}.navtabs .tab.multiTab{margin-left:0;padding:10px 12px}.navtabs .tab.active:after{bottom:-4px;height:3px}
+ .layout{display:flex;flex-direction:column;gap:10px;min-height:auto}.layout>.preview{order:-2;min-height:43vh;max-height:420px;flex:none}.layout>.panel.detail{order:-1}.layout>.panel:first-child{order:0}.preview-head{top:9px;left:9px;max-width:70%;min-width:0;padding:8px 9px}.preview-head:before{font-size:7px;margin-bottom:5px}.preview-head .preview-name{font-size:clamp(21px,5vw,31px);line-height:1.04}.preview-head .muted{font-size:8px}.preview-bottom{bottom:10px;left:9px;right:9px}.preview-bottom .hint{font-size:9px;padding:5px 6px}.preview-bottom .chip{font-size:8px;padding:5px}.preview .blueprintNo{font-size:8px;right:11px;top:8px}
+ .panel{padding:15px}.panel h2{font-size:18px}.detail .desc{min-height:0}.mechanics{max-height:320px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.mechcard{min-height:56px;padding:7px 6px}.missiongrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.mission{min-height:161px;padding:12px}.mission .num{font-size:40px}.mission h3{font-size:12px}.mission p{font-size:10px;min-height:44px}.two-col{grid-template-columns:1fr}.upgradegrid{grid-template-columns:1fr}.network-layout{display:block}.netAside{margin-top:14px}.studioLayout{grid-template-columns:1fr}.settingRow{grid-template-columns:1fr 140px;gap:9px;padding:12px}.settingRow p{font-size:10px}
+ .hudTop{top:6px;left:6px;right:6px;gap:3px}.hudpanel{padding:6px 7px!important}.leftHUD{width:37vw;max-width:155px}.rightHUD{width:29vw;max-width:110px}.mission-hud{min-width:0;width:30vw;padding:6px!important}.mission-hud h2{font-size:10px}.mission-hud .eyebrow,.hudpanel .eyebrow{font-size:8px;letter-spacing:0}.hudTop .barcaption{font-size:9px;margin:3px 0 2px}.hudTop .bar{height:7px}.rightHUD #radar{height:54px!important}.targetHUD h3{font-size:9px}.mission-hud p{font-size:9px}.hudTop .networkHud{font-size:8px}.bossbar{top:135px!important}
+ #battlePlace{left:6px;bottom:137px;font-size:8px;padding:4px 6px;max-width:40vw}#fpsStatus{right:8px;bottom:139px;font-size:8px}.bottomHUD{left:5px!important;right:5px!important;bottom:3px!important;gap:3px}.wepslot{min-height:37px;padding:3px 4px;font-size:8px}.weaponBox{max-width:47vw}.bottomHUD #hudScore{font-size:8px!important;padding:5px!important}.hudAction{font-size:9px!important;padding:5px!important}
+ .mobActions{bottom:48px!important;right:7px!important;gap:4px;grid-template-columns:repeat(3,46px)}.mobBtn{width:46px!important;height:46px!important;font-size:8px!important;border-radius:3px!important}.mobBtn.fire{height:96px!important;font-size:13px!important}.joy{left:11px!important;bottom:65px!important;width:103px!important;height:103px!important}.joyknob{width:43px!important;height:43px!important;margin:-21px!important}#specialGauge{bottom:58px;width:35vw}#comboCard{top:67%;font-size:11px}#comboCard strong{font-size:22px}
+}
+@media(max-width:430px){.brand h1{font-size:23px}.topinfo .chip:first-child{display:none}.preview{min-height:37vh}.mechcard .mech-name{font-size:10px}.mechcard .mech-code{font-size:9px}.settingRow{grid-template-columns:1fr 102px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Late-stage proof correction: the masthead must be dark ink, not pale stock paper. */
+#menu .topbar{background:#1b3029;color:#eee4cb;border:1px solid #b3a07e;border-left:6px solid #ad684b;box-shadow:4px 5px 0 #020c0b80;padding:12px 17px}
+#menu .topbar .brand h1{color:#f0e2c7;text-shadow:2px 2px 0 #192922}
+#menu .topbar .brand p{color:#c9bea4}
+#menu .topbar .money{color:#edcb8a}
+#menu .topbar .identity.renameBtn{color:#e1e9d3}
+#menu .topbar:after{background:#1b3029}
+#menu .topbar .topinfo .chip{background:#253d32}
+@media(max-width:790px){#menu .topbar{padding:8px 9px;gap:7px}#menu .topbar .brand h1{font-size:26px}}
+
 </style>
 </head>
 <body>
-<canvas id="world" aria-label="3Dゲーム画面"></canvas><div id="vignette"></div><div id="scanlines"></div>
+<canvas id="world" aria-label="3Dゲーム画面"></canvas><canvas id="atmosphere" aria-hidden="true"></canvas><div id="vignette"></div><div id="scanlines"></div>
 <main id="menu"><div class="shell">
-<header class="topbar"><div class="brand"><div class="brand-icon"><span>SE.</span></div><div><h1>STEEL ECLIPSE</h1><p>機甲図面集 — FUSION RECORDS / Vol. 01</p></div></div><div class="topinfo"><span class="chip" id="sourceStatus">CUSTOM GEOMETRY / NO.01</span><span class="chip" id="rankStatus">RANK 01</span><div class="money mono">◆ <span id="credits">0</span> CR</div><button type="button" class="identity renameBtn" id="pilotRename" title="操縦士名を変更">PILOT <b id="pilotLabel">NO NAME</b><small>名前変更 ✎</small></button></div></header>
-<nav class="navtabs" aria-label="メニュー"><button class="tab active" data-tab="garage">格納庫</button><button class="tab" data-tab="missions">作戦</button><button class="tab" data-tab="upgrades">強化</button><button class="tab" data-tab="records">戦績</button><button class="tab" data-tab="helpPanel">操作</button><button class="tab multiTab" data-tab="multiplayer">● オンライン / 対戦</button></nav>
-<section id="garage"><div class="layout"><div class="panel"><div class="eyebrow">/// AVAILABLE FRAMES</div><h2>機動兵器リスト</h2><label class="filterInput"><span>機体索引 / SEARCH</span><input id="frameSearch" placeholder="機体名・作品イメージで探す" autocomplete="off"></label><div class="mechanics" id="mechList"></div><div class="footnote">★ すべての機体が初めから利用可能。公式の機体・名称・画像・データを収録しない非公式の創作ゲームです。</div></div>
-<div class="preview"><div class="preview-head"><div class="eyebrow">FRAME INSPECTION / 3D</div><div class="preview-name" id="mechHero">ATLAS / 09</div><div class="muted small" id="mechSubtitle">HEAVY ASSAULT</div></div><div class="preview-bottom"><div class="hint">◈ 回転しながら機体を確認できます<br>◈ 独自設計の装甲と兵装で立体化</div><span class="chip" id="modelStatus">BUILT-IN 3D</span></div></div>
-<div class="panel detail"><div class="eyebrow">/// UNIT CONFIGURATION</div><h2>機体詳細</h2><p class="desc" id="mechDesc"></p><div id="mechStats"></div><div class="line"></div><div class="eyebrow">/// EQUIPMENT</div><div class="section-kicker" id="mechSpecial"></div><div class="button-stack"><button id="buyButton" class="btn goldbtn wide" type="button">機体を購入</button><button id="equipButton" class="btn wide" type="button">この機体を使用</button><button id="goMission" class="btn alt wide" type="button">作戦選択へ →</button></div><div class="line"></div><div class="footnote"><b>造形ノート</b>　各融合機は独自のWebGL立体装甲を生成。角度・装備・翼・発光パーツは機体ごとに変化します。外部モデルの無断複製は行っていません。</div><label class="hidden"><input id="useOnline" type="checkbox">外部モデルOFF</label></div></div></section>
-<section id="missions"><div class="panel"><div class="eyebrow">/// CAMPAIGN OPERATIONS</div><h2>作戦地図から出撃先を選ぶ <span class="muted small">全48地点 / 全開放</span></h2><div id="sectorFilters" class="sectorFilters"></div><div id="missionGrid" class="missiongrid"></div><div class="line"></div><div class="two-col"><div><h3 id="missionTitle">MISSION 01</h3><p id="missionDescription" class="muted" style="line-height:1.8;margin-top:8px"></p><p class="section-kicker" id="missionReward"></p></div><div class="button-stack"><button class="btn goldbtn wide" id="sortieButton">作戦開始 / SORTIE</button><button class="btn alt wide" id="backGarage">格納庫へ戻る</button></div></div></div></section>
-<section id="upgrades"><div class="two-col"><div class="panel"><div class="eyebrow">/// R&D BAY</div><h2><span id="upUnitName"></span> — 機体改造</h2><div class="upgradegrid" id="upgradeGrid"></div></div><div class="panel"><div class="eyebrow">/// CUSTOMIZATION</div><h2>戦術支援 / チューニング</h2><p class="muted" style="line-height:1.8">すべての機体ごとに個別強化を保存。最初の20段階を超えると限界改造が解放され、最大30段階まで拡張可能です。</p><div class="line"></div><p class="small">改造の上限は各項目30。最大まで強化しても、ステージ進行の難度は上昇します。</p><button class="btn wide" style="margin-top:20px" id="upgradeToGarage">格納庫で機体を変更</button></div></div></section>
-<section id="records"><div class="panel"><div class="eyebrow">/// BATTLE ARCHIVE</div><h2>戦闘データ</h2><div class="recordCards" id="recordCards"></div><div class="section-kicker">ACHIEVEMENTS / 実績</div><div class="achievements" id="achievements"></div><div class="line"></div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn alt" id="exportSave">セーブを書き出す</button><button class="btn alt" id="importSave">セーブを読み込む</button><input id="saveFile" type="file" accept="application/json" style="display:none"><button class="btn danger" id="resetSave">全データ初期化</button></div><div class="footnote">セーブは現在のブラウザのlocalStorageに保存。データ消失に備え書き出しを推奨します。</div></div></section>
+<header class="topbar"><div class="brand"><div class="brand-icon"><span>S/E</span></div><div><h1>STEEL ECLIPSE</h1><p>機甲設計室 — REFORGED RECORDS / ISSUE. 02</p></div></div><div class="topinfo"><span class="chip" id="sourceStatus">CUSTOM GEOMETRY / NO.01</span><span class="chip" id="rankStatus">RANK 01</span><div class="money mono">◆ <span id="credits">0</span> CR</div><button type="button" class="identity renameBtn" id="pilotRename" title="操縦士名を変更">PILOT <b id="pilotLabel">NO NAME</b><small>名前変更 ✎</small></button></div></header>
+<nav class="navtabs" aria-label="メニュー"><button class="tab active" data-tab="garage">格納庫</button><button class="tab" data-tab="missions">作戦</button><button class="tab" data-tab="upgrades">強化</button><button class="tab" data-tab="records">戦績</button><button class="tab" data-tab="helpPanel">操作</button><button class="tab" data-tab="workshop">画質・設定</button><button class="tab multiTab" data-tab="multiplayer">● オンライン / 対戦</button></nav>
+<div class="editionStrip"><span><strong>SE / 02</strong> &nbsp; 機甲戦線：再鍛造計画 &nbsp; / &nbsp; <b>FRAMES 40</b> &nbsp; • &nbsp; <b>OPERATIONS 48</b></span><span class="stripThin">PROTOTYPE WORKSHOP / METAL · MOTION · MEMORY &nbsp; 2026</span></div>
+<section id="garage"><div class="layout"><div class="panel"><div class="eyebrow">FRAME CATALOGUE / ISSUE 02</div><h2>機動兵器リスト</h2><label class="filterInput"><span>機体索引 / SEARCH</span><input id="frameSearch" placeholder="機体名・作品イメージで探す" autocomplete="off"></label><div class="mechanics" id="mechList"></div><div class="footnote">★ すべての機体が初めから利用可能。公式の機体・名称・画像・データを収録しない非公式の創作ゲームです。</div></div>
+<div class="preview"><div class="calibration"></div><div class="blueprintNo">S/E FIELD RECORD<br>EXPERIMENTAL UNIT</div><div class="preview-head"><div class="eyebrow">INSTRUMENT / MODEL BAY</div><div class="preview-name" id="mechHero">NOVA MANTHA</div><div class="muted small" id="mechSubtitle">HEAVY ASSAULT</div></div><div class="preview-bottom"><div class="hint">実物設計を意識した独自の多層装甲モデル<br>機体の装備・翼・推進部を機構別に造形</div><span class="chip" id="modelStatus">BUILT-IN 3D</span></div></div>
+<div class="panel detail"><div class="eyebrow">FIELD DOCUMENT / CONFIG</div><h2>機体詳細</h2><p class="desc" id="mechDesc"></p><div id="mechStats"></div><div class="line"></div><div class="eyebrow">/// EQUIPMENT</div><div class="section-kicker" id="mechSpecial"></div><div class="button-stack"><button id="buyButton" class="btn goldbtn wide" type="button">機体を購入</button><button id="equipButton" class="btn wide" type="button">この機体を使用</button><button id="goMission" class="btn alt wide" type="button">作戦選択へ →</button></div><div class="line"></div><div class="footnote"><b>造形ノート</b>　各融合機は独自のWebGL立体装甲を生成。角度・装備・翼・発光パーツは機体ごとに変化します。外部モデルの無断複製は行っていません。</div><label class="hidden"><input id="useOnline" type="checkbox">外部モデルOFF</label></div></div></section>
+<section id="missions"><div class="panel"><div class="eyebrow">OPERATIONAL ATLAS / 48</div><h2>作戦地図から出撃先を選ぶ <span class="muted small">全48地点 / 全開放</span></h2><div id="sectorFilters" class="sectorFilters"></div><div id="missionGrid" class="missiongrid"></div><div class="line"></div><div class="two-col"><div><h3 id="missionTitle">MISSION 01</h3><p id="missionDescription" class="muted" style="line-height:1.8;margin-top:8px"></p><p class="section-kicker" id="missionReward"></p></div><div class="button-stack"><button class="btn goldbtn wide" id="sortieButton">作戦開始 / SORTIE</button><button class="btn alt wide" id="backGarage">格納庫へ戻る</button></div></div></div></section>
+<section id="upgrades"><div class="two-col"><div class="panel"><div class="eyebrow">TECHNICAL DEPARTMENT</div><h2><span id="upUnitName"></span> — 機体改造</h2><div class="upgradegrid" id="upgradeGrid"></div></div><div class="panel"><div class="eyebrow">/// CUSTOMIZATION</div><h2>戦術支援 / チューニング</h2><p class="muted" style="line-height:1.8">すべての機体ごとに個別強化を保存。最初の20段階を超えると限界改造が解放され、最大30段階まで拡張可能です。</p><div class="line"></div><p class="small">改造の上限は各項目30。最大まで強化しても、ステージ進行の難度は上昇します。</p><button class="btn wide" style="margin-top:20px" id="upgradeToGarage">格納庫で機体を変更</button></div></div></section>
+<section id="records"><div class="panel"><div class="eyebrow">SORTIE ARCHIVE / HISTORY</div><h2>戦闘データ</h2><div class="recordCards" id="recordCards"></div><div class="section-kicker">ACHIEVEMENTS / 実績</div><div class="achievements" id="achievements"></div><div class="line"></div><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn alt" id="exportSave">セーブを書き出す</button><button class="btn alt" id="importSave">セーブを読み込む</button><input id="saveFile" type="file" accept="application/json" style="display:none"><button class="btn danger" id="resetSave">全データ初期化</button></div><div class="footnote">セーブは現在のブラウザのlocalStorageに保存。データ消失に備え書き出しを推奨します。</div></div></section>
 
 <section id="multiplayer" style="display:none"><div class="network-layout">
-<div class="panel netMain"><div class="eyebrow">LIVE OPERATION / PC × MOBILE</div><h2>通信作戦室</h2><p class="netLead">同じ戦場に集まる。協力して大型機を撃破するか、操縦士同士で決着をつけるか。</p>
+<div class="panel netMain"><div class="eyebrow">LIVE COMMUNICATION / CROSS DEVICE</div><h2>通信作戦室</h2><p class="netLead">同じ戦場に集まる。協力して大型機を撃破するか、操縦士同士で決着をつけるか。</p>
 <div class="netForm"><label>操縦士名 <input id="pilotName" maxlength="16" placeholder="例：KASAI" autocomplete="nickname"></label>
 <label>接続先 <input id="netUrl" spellcheck="false" placeholder="ws://localhost:3000/ws"></label>
 <label>通信方式 <select id="netMode"><option value="coop">協力作戦 / 2〜4人で敵部隊攻略</option><option value="versus">対戦 / 2〜4人で生き残り戦</option></select></label>
@@ -67,12 +176,33 @@ body{font-family:'Yu Gothic','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;backg
 <div id="netStatus" class="netStatus">待機中 — ソロプレイはサーバーなしで遊べます。</div></div>
 <div class="panel roomPanel hidden" id="roomPanel"><div class="eyebrow">MUSTER POINT</div><div class="roomCode">ROOM <strong id="roomCode">———</strong> <button id="copyRoom" class="btn alt">コピー</button></div><p id="roomDetails" class="muted"></p><div id="roomMembers" class="roomMembers"></div><div class="netButtonRow"><button class="btn goldbtn wide" id="roomStart">全員で出撃する</button><button class="btn alt" id="roomLeave">退出</button></div><p class="small muted">部屋作成者が作戦エリアを選択し、全員の準備が揃ったら出撃。出撃前なら格納庫で機体を切り替えられます。</p></div>
 </div><aside class="panel netAside"><div class="eyebrow">FIELD GUIDE</div><h2>接続のしかた</h2><p><b>同じWi-FiのPC・スマホ</b>では、PCでサーバーを起動し、両方ともそのPCのURLへアクセスします。PC・スマホで同じ部屋コードを使用してください。</p><p><b>離れた場所の友達</b>とは、HTTPS/WSS対応のNode.jsサーバーへ公開してください。GitHub Pagesだけで対戦用サーバーは運用できません。</p><p><b>協力</b>：部屋主が敵AI・ボス進行を統括し、参加者の攻撃を共有。<br><b>対戦</b>：プレイヤーが相互攻撃する最大4人のサバイバル方式。戦闘結果は全員に配信します。</p><div class="noteBox">※同じ端末内だけの疑似マルチではありません。接続先のWebSocketサーバーが実際に動作している必要があります。</div></aside></div></section>
+
+<section id="workshop" aria-label="画質と操作の設定">
+<div class="studioLayout">
+ <div class="panel"><span class="studioTag">01 — GRAPHICS / SYSTEM</span><h2 class="studioLead">機体を、もう一段深く。</h2>
+ <p class="workshopNote">画質・操作・音の挙動を端末ごとに調整します。設定はこのブラウザに自動保存され、次回の出撃でも有効です。</p>
+ <div class="settingsGrid">
+  <div class="settingRow"><div><label for="setQuality">3D描画精度</label><p>装甲ディテール、粒子数、内部描画解像度を調整</p></div><select id="setQuality"><option value="cinematic">精密 / PC向け</option><option value="balanced">標準 / 推奨</option><option value="battery">軽量 / スマホ向け</option></select></div>
+  <div class="settingRow"><div><label for="setAudio">合成エンジン音と効果音</label><p>自作Web Audioによる動力・射撃・機体警告音</p></div><input id="setAudio" type="checkbox" checked></div>
+  <div class="settingRow"><div><label for="setWeather">戦場の天候演出</label><p>雨・降雪・粉塵・火の粉・浮遊粒子</p></div><input id="setWeather" type="checkbox" checked></div>
+  <div class="settingRow"><div><label for="setShake">被弾時の画面揺れ</label><p>迫力を高める微細な振動（酔いやすい場合はOFF）</p></div><input id="setShake" type="checkbox"></div>
+  <div class="settingRow"><div><label for="setSensitivity">視点操作の感度</label><p>マウス・スマホのスワイプ操作に反映</p></div><input id="setSensitivity" type="range" min="25" max="180" step="5"><span id="sensitivityValue" class="mono" style="color:#956046">100%</span></div>
+  <div class="settingRow"><div><label for="fullscreenBtn">フルスクリーン</label><p>対応ブラウザなら画面いっぱいに展開できます</p></div><button id="fullscreenBtn" class="btn alt" type="button">全画面に切替</button></div>
+ </div></div>
+ <div class="panel"><span class="studioTag">02 — FIELD MANUAL</span><h2 class="studioLead">設計ノート。</h2>
+ <p class="workshopNote">本作は既存の公式3Dモデルの転載ではありません。架空の試験機を、装甲ブロック・先端の面取り・メカニカル関節・バインダー・フィン・推進器を組み合わせて描画します。40機の骨格には共通の設計言語があり、型式ごとに追加の外装と兵装が分かれます。</p>
+ <div class="line"></div><p style="color:#3b594b;line-height:2;font-size:13px"><b>演出</b> — 金属の反射 / 擬似的なエッジ光 / 発光装甲 / 戦場環境音 / レーダー / 被弾反応<br><b>作戦</b> — 48地点・16種類の環境モチーフ / 4ウェーブとボス / ソロ・協力・対戦<br><b>移動</b> — 慣性・ダッシュ・ジャンプ / 衝突判定 / 武装冷却とシールド</p>
+ <div class="line"></div><p style="font-size:11px;color:#718073;line-height:1.8">これは独自プログラムによるスタイライズド3Dです。商用AAA作品のフォトリアル映像、物理演算、サーバー同期と同等ではありません。実際の表示は端末性能とWebGL対応に依存します。</p>
+ <button id="settingsToGarage" class="btn" style="margin-top:16px">格納庫へ戻る</button></div>
+</div></section>
+
 <section id="helpPanel"><div class="helpgrid"><div class="panel"><h3>PC 操作</h3><p><span class="key">W A S D</span> 移動　<span class="key">マウス移動</span> カメラ旋回（右ドラッグ）<br><span class="key">J</span> または <span class="key">左クリック</span> 射撃　<span class="key">K</span> 格闘<br><span class="key">Shift</span> ダッシュ　<span class="key">Space</span> ジャンプ<br><span class="key">L</span> 必殺技　<span class="key">E</span> シールド<br><span class="key">1 2 3</span> 武器切替　<span class="key">Tab / Q</span> 敵ターゲット切替<br><span class="key">P / Esc</span> ポーズ</p></div><div class="panel"><h3>スマートフォン 操作</h3><p>左のバーチャルスティックで移動。右の FIRE ボタンで射撃、SLASHで格闘、DASHで高速移動、BOOSTでジャンプ、SPで必殺技、GUARDで防御。画面上をなぞると視点を回転できます。</p></div><div class="panel"><h3>戦闘ルール</h3><p>敵機と4ウェーブを攻略して大型ボスを撃破。CRを入手して機体を最大30段階まで強化できます。全40機・全48作戦は初期開放済みです。オンラインでは協力攻略と対人戦が選べます。</p></div><div class="panel"><h3>3Dモデルと素材</h3><p>機体・背景・エフェクトはWebGLで独自に生成します。実在作品の3Dモデルや写真は含みません。音はWeb Audioによる合成音です。</p></div></div></section>
-<div class="footnote">© 2026 STEEL ECLIPSE : FUSION RECORDS. オリジナル3D形状／自作WebGLエンジン。作品・製作会社とは無関係の非公式ファン創作。</div>
+<div class="footnote">© 2026 STEEL ECLIPSE : REFORGED RECORDS — 手作りの独自機甲ゲーム。公式の作品・制作会社・商品とは無関係です。</div>
 </div></main>
-<section id="battleHUD" class="hidden"><div class="hudTop"><div class="hudpanel leftHUD"><div class="eyebrow" id="hudFrame">FRAME / ATLAS</div><div class="barcaption"><span>HP / INTEGRITY</span><span id="hpText" class="mono">0 / 0</span></div><div class="bar health"><div id="hpFill"></div></div><div class="barcaption"><span>GUARD</span><span id="shieldText" class="mono">100%</span></div><div class="bar"><div id="shieldFill"></div></div><div class="barcaption"><span>BOOST ENERGY</span><span id="energyText" class="mono">100%</span></div><div class="bar energy"><div id="energyFill"></div></div></div><div class="hudpanel mission-hud"><div class="eyebrow">OPERATION / ACTIVE</div><h2 id="hudMission">OP 01</h2><p id="hudWave">WAVE 1 / 4</p><p id="hudKills">KILLS 0</p><p id="networkHud" class="networkHud">SOLO</p></div><div class="hudpanel rightHUD"><div class="eyebrow">ENEMY RADAR</div><canvas id="radar" width="150" height="90" style="width:100%;height:90px;display:block"></canvas><div class="targetHUD" id="targetHUD"><h3 id="targetName">NO TARGET</h3><div class="bar"><div id="targetFill" style="width:0"></div></div></div></div></div><div id="bossbar" class="bossbar hidden"><h3><span id="bossName">BOSS</span><span id="bossHP"></span></h3><div class="bar"><div id="bossFill"></div></div></div><div class="reticle"><span></span></div><div class="toastbox" id="toasts"></div><div class="bottomHUD"><div class="weaponBox"><div class="wepslot active" data-weapon="0">[1] BEAM<br>RIFLE</div><div class="wepslot" data-weapon="1">[2] GATLING</div><div class="wepslot" data-weapon="2">[3] CANNON</div></div><div class="hudpanel mono" id="hudScore">CR +000 &nbsp; • &nbsp; 00:00</div><button id="pauseButton" class="btn alt hudAction" style="padding:8px 12px">Ⅱ</button><button id="quitOnline" class="btn alt hudAction hidden">退出</button></div><div id="mobile"><div class="joy" id="joystick"><div class="joyknob" id="joyknob"></div></div><div class="mobActions"><button class="mobBtn" data-action="slash">SLASH</button><button class="mobBtn" data-action="special">SP</button><button class="mobBtn fire" data-action="shoot">FIRE</button><button class="mobBtn" data-action="dash">DASH</button><button class="mobBtn" data-action="jump">BOOST</button><button class="mobBtn" data-action="shield">GUARD</button><button class="mobBtn" data-action="switch">LOCK</button></div></div></section>
+<section id="battleHUD" class="hidden"><div class="hudTop"><div class="hudpanel leftHUD"><div class="eyebrow" id="hudFrame">FRAME / ATLAS</div><div class="barcaption"><span>HP / INTEGRITY</span><span id="hpText" class="mono">0 / 0</span></div><div class="bar health"><div id="hpFill"></div></div><div class="barcaption"><span>GUARD</span><span id="shieldText" class="mono">100%</span></div><div class="bar"><div id="shieldFill"></div></div><div class="barcaption"><span>BOOST ENERGY</span><span id="energyText" class="mono">100%</span></div><div class="bar energy"><div id="energyFill"></div></div></div><div class="hudpanel mission-hud"><div class="eyebrow">OPERATION / ACTIVE</div><h2 id="hudMission">OP 01</h2><p id="hudWave">WAVE 1 / 4</p><p id="hudKills">KILLS 0</p><p id="networkHud" class="networkHud">SOLO</p></div><div class="hudpanel rightHUD"><div class="eyebrow">ENEMY RADAR</div><canvas id="radar" width="150" height="90" style="width:100%;height:90px;display:block"></canvas><div class="targetHUD" id="targetHUD"><h3 id="targetName">NO TARGET</h3><div class="bar"><div id="targetFill" style="width:0"></div></div></div></div></div><div id="bossbar" class="bossbar hidden"><h3><span id="bossName">BOSS</span><span id="bossHP"></span></h3><div class="bar"><div id="bossFill"></div></div></div><div class="reticle" id="lockReticle"><span></span></div><div id="hitCross"></div><div id="comboCard"><strong id="comboNumber">00</strong> &nbsp; CHAIN <span id="comboDmg">+0</span></div><div id="battlePlace">OPERATION 01 / FIELD REPORT</div><div id="fpsStatus">GRAPHICS · READY</div><div id="specialGauge"><div id="specialFill"></div></div><div class="toastbox" id="toasts"></div><div class="bottomHUD"><div class="weaponBox"><div class="wepslot active" data-weapon="0">[1] BEAM<br>RIFLE</div><div class="wepslot" data-weapon="1">[2] GATLING</div><div class="wepslot" data-weapon="2">[3] CANNON</div></div><div class="hudpanel mono" id="hudScore">CR +000 &nbsp; • &nbsp; 00:00</div><button id="pauseButton" class="btn alt hudAction" style="padding:8px 12px">Ⅱ</button><button id="quitOnline" class="btn alt hudAction hidden">退出</button></div><div id="mobile"><div class="joy" id="joystick"><div class="joyknob" id="joyknob"></div></div><div class="mobActions"><button class="mobBtn" data-action="slash">SLASH</button><button class="mobBtn" data-action="special">SP</button><button class="mobBtn fire" data-action="shoot">FIRE</button><button class="mobBtn" data-action="dash">DASH</button><button class="mobBtn" data-action="jump">BOOST</button><button class="mobBtn" data-action="shield">GUARD</button><button class="mobBtn" data-action="switch">LOCK</button><button class="mobBtn" data-action="weapon">WEAPON</button></div></div></section>
 <div id="modalWrap" class="modalWrap hidden"><div class="modal" id="modalContent"></div></div>
 <script>
+
 'use strict';
 /* STEEL ECLIPSE - self-contained, dependency-free WebGL action game.
    External model files (optional online feature) from CC0 FORGE Character Lab:
@@ -97,10 +227,29 @@ function seeded(seed){let n=seed>>>0;return()=>{n=(Math.imul(1664525,n)+10139042
 const canvas=$('world');let gl,program,uniforms={},attrs={},geometry={},renderOK=false,fallback2d=false,canvas2d=null;
 try{gl=canvas.getContext('webgl2',{antialias:true,alpha:false,powerPreference:'high-performance'})||canvas.getContext('webgl',{antialias:true,alpha:false,powerPreference:'high-performance'});if(!gl)throw Error('WebGL unsupported');
 const vs=`attribute vec3 aP;attribute vec3 aN;attribute vec2 aUV;uniform mat4 uVP;uniform mat4 uModel;varying vec3 vN;varying vec3 vP;varying vec2 vUV;void main(){vec4 wp=uModel*vec4(aP,1.);vP=wp.xyz;vN=normalize(mat3(uModel)*aN);vUV=aUV;gl_Position=uVP*wp;}`;
-const fs=`precision mediump float;uniform vec3 uColor,uCam,uFog,uSun;uniform float uEmit,uTexUse,uAlpha;uniform sampler2D uTex;varying vec3 vN,vP;varying vec2 vUV;void main(){vec3 N=normalize(vN);vec3 L=normalize(uSun);float diff=max(dot(N,L),.05);float wrap=max(dot(N,L),.0)*.56+.25;vec3 V=normalize(uCam-vP);float shine=pow(max(dot(reflect(-L,N),V),.0),26.)*.32;float rim=pow(1.-max(dot(N,V),.0),3.)*.23;vec3 base=uColor;if(uTexUse>.5)base*=texture2D(uTex,vUV).rgb;vec3 shade=base*(wrap+.25*diff)+vec3(.57,.78,1.)*shine+vec3(.12,.30,.41)*rim;shade+=base*uEmit*1.3;float fog=clamp((distance(uCam,vP)-37.)/130.,0.,.88);shade=mix(shade,uFog,fog);gl_FragColor=vec4(pow(max(shade,0.),vec3(.95)),uAlpha);}`;
+const fs=`precision mediump float;
+uniform vec3 uColor,uCam,uFog,uSun;uniform float uEmit,uTexUse,uAlpha;uniform sampler2D uTex;
+varying vec3 vN,vP;varying vec2 vUV;
+float hash3(vec3 x){return fract(sin(dot(x,vec3(127.1,311.7,74.7)))*43758.5453);}
+void main(){
+ vec3 N=normalize(vN),L=normalize(uSun),V=normalize(uCam-vP);
+ float nd=max(dot(N,L),.0),nside=max(dot(N,vec3(-.27,.32,-.91)),.0);
+ float metal=pow(max(dot(reflect(-L,N),V),.0),26.)*.46+pow(max(dot(reflect(-L,N),V),.0),85.)*.22;
+ float edge=pow(1.-max(dot(N,V),.0),3.2)*.30;
+ vec3 base=uColor;if(uTexUse>.5)base*=texture2D(uTex,vUV).rgb;
+ float grain=hash3(floor(vP*6.4));float micro=.972+grain*.036;
+ vec3 bounce=vec3(.15,.20,.18);
+ vec3 col=base*(.28+nd*.64+nside*.15)*micro + bounce*.12;
+ col+=vec3(.95,.88,.71)*metal+vec3(.32,.53,.50)*edge;
+ col+=base*uEmit*1.35;
+ float fog=clamp((distance(uCam,vP)-53.)/165.,0.,.85);
+ col=mix(col,uFog,fog);
+ col=col/(col+vec3(.20));col=pow(max(col,0.),vec3(.90));
+ gl_FragColor=vec4(col,uAlpha);
+}`;
 function comp(t,s){let sh=gl.createShader(t);gl.shaderSource(sh,s);gl.compileShader(sh);if(!gl.getShaderParameter(sh,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(sh));return sh}
 program=gl.createProgram();gl.attachShader(program,comp(gl.VERTEX_SHADER,vs));gl.attachShader(program,comp(gl.FRAGMENT_SHADER,fs));gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);for(let n of ['uVP','uModel','uColor','uCam','uFog','uSun','uEmit','uTexUse','uAlpha','uTex'])uniforms[n]=gl.getUniformLocation(program,n);for(let n of ['aP','aN','aUV'])attrs[n]=gl.getAttribLocation(program,n);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);gl.uniform1i(uniforms.uTex,0);renderOK=true;
-}catch(e){console.warn('WebGL is unavailable. Canvas2D compatibility mode:',e);try{canvas2d=canvas.getContext('2d');fallback2d=!!canvas2d}catch{}if(!fallback2d){const old=canvas,rep=old.cloneNode();old.replaceWith(rep);canvas2d=rep.getContext('2d');fallback2d=!!canvas2d}if(fallback2d)setTimeout(()=>menuNotify('互換2D描画モードで起動しました。3DにはWebGL対応ブラウザをご利用ください'),700)}
+}catch(e){console.warn('WebGL is unavailable. Canvas2D compatibility mode:',e);try{canvas2d=canvas.getContext('2d');fallback2d=!!canvas2d}catch{}if(!fallback2d){const old=canvas,rep=old.cloneNode();old.replaceWith(rep);canvas2d=rep.getContext('2d');fallback2d=!!canvas2d}if(fallback2d)console.info('WebGL disabled; 2D compatibility renderer enabled')}
 function meshFrom(pos,normals,uv,indices){let inter=new Float32Array(pos.length/3*8);for(let i=0;i<pos.length/3;i++){let j=i*8;inter[j]=pos[i*3];inter[j+1]=pos[i*3+1];inter[j+2]=pos[i*3+2];inter[j+3]=normals[i*3]??0;inter[j+4]=normals[i*3+1]??1;inter[j+5]=normals[i*3+2]??0;inter[j+6]=uv[i*2]??0;inter[j+7]=uv[i*2+1]??0}const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,inter,gl.STATIC_DRAW);let ib=null,it=null,num=pos.length/3;if(indices&&indices.length){num=indices.length;ib=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ib);let max=indices.length?Math.max(...indices.slice(0,Math.min(100,indices.length))):0;if(indices instanceof Uint32Array||max>65535){it=gl.UNSIGNED_INT;gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint32Array(indices),gl.STATIC_DRAW)}else{it=gl.UNSIGNED_SHORT;gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(indices),gl.STATIC_DRAW)}}return{vbo:b,ibo:ib,indexType:it,count:num}}
 function makeBox(){let p=[],n=[],u=[],ids=[];const faces=[[[0,0,1],[[ -1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]]],[[0,0,-1],[[1,-1,-1],[-1,-1,-1],[-1,1,-1],[1,1,-1]]],[[1,0,0],[[1,-1,1],[1,-1,-1],[1,1,-1],[1,1,1]]],[[-1,0,0],[[-1,-1,-1],[-1,-1,1],[-1,1,1],[-1,1,-1]]],[[0,1,0],[[-1,1,1],[1,1,1],[1,1,-1],[-1,1,-1]]],[[0,-1,0],[[-1,-1,-1],[1,-1,-1],[1,-1,1],[-1,-1,1]]]];for(let f of faces){let ii=p.length/3;f[1].forEach((v,j)=>{p.push(...v.map(x=>x*.5));n.push(...f[0]);u.push(j===0||j===3?0:1,j<2?0:1)});ids.push(ii,ii+1,ii+2,ii,ii+2,ii+3)}return meshFrom(p,n,u,ids)}
 function makeCylinder(seg=10,t0=1,t1=1){let p=[],n=[],u=[],id=[];for(let i=0;i<=seg;i++){let a=i/seg*Math.PI*2,x=Math.cos(a),z=Math.sin(a);p.push(x*.5*t0,-.5,z*.5*t0,x*.5*t1,.5,z*.5*t1);n.push(x,0,z,x,0,z);u.push(i/seg,0,i/seg,1)}for(let i=0;i<seg;i++){let k=i*2;id.push(k,k+1,k+2,k+1,k+3,k+2)}for(let top of [0,1]){let ci=p.length/3;p.push(0,top?.5:-.5,0);n.push(0,top?1:-1,0);u.push(.5,.5);for(let i=0;i<=seg;i++){let a=i/seg*Math.PI*2,x=Math.cos(a),z=Math.sin(a);p.push(x*.5*(top?t1:t0),top?.5:-.5,z*.5*(top?t1:t0));n.push(0,top?1:-1,0);u.push(.5+x*.5,.5+z*.5)}for(let i=0;i<seg;i++)top?id.push(ci,ci+i+2,ci+i+1):id.push(ci,ci+i+1,ci+i+2)}return meshFrom(p,n,u,id)}
@@ -115,7 +264,13 @@ function cyl(base,x,y,z,sx,sy,sz,col,emit=0,rx=0){drawMesh(geometry.cyl,MM(base,
 function plate(base,x,y,z,sx,sy,sz,col,emit=0,rz=0){drawMesh(geometry.plate,MM(base,locMat(x,y,z,sx,sy,sz,0,0,rz)),color(col),emit)}
 function rod(a,b,r,col,emit=0){drawMesh(geometry.cyl,betweenMat(a,b,r),color(col),emit)}
 function setupCam(eye,target,fog){let aspect=canvas.width/canvas.height;renderCtx.cam=eye;renderCtx.vp=MM(MP(Math.PI/3.25,aspect,.09,290),ML(eye,target));renderCtx.fog=fog;gl.useProgram(program);gl.uniformMatrix4fv(uniforms.uVP,false,renderCtx.vp);gl.uniform3fv(uniforms.uCam,eye);gl.uniform3fv(uniforms.uFog,fog);gl.uniform3fv(uniforms.uSun,[-.35,.84,-.3])}
-function resize(){let dpr=Math.min(window.devicePixelRatio||1,innerWidth<750?1.4:1.7);const w=Math.max(1,Math.floor(innerWidth*dpr)),h=Math.max(1,Math.floor(innerHeight*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;if(gl)gl.viewport(0,0,w,h)}}window.addEventListener('resize',resize);resize();
+
+const PREF_KEY='steel_eclipse_reforged_preferences_v1';
+const visualPrefs={quality:innerWidth<800?'battery':'balanced',audio:true,weather:true,shake:false,sensitivity:100};
+try{const v=JSON.parse(localStorage.getItem(PREF_KEY)||'{}');for(const k of Object.keys(visualPrefs))if(v[k]!==undefined)visualPrefs[k]=v[k]}catch{}
+function savePrefs(){try{localStorage.setItem(PREF_KEY,JSON.stringify(visualPrefs))}catch{}}
+
+function resize(){let dpr=Math.min(window.devicePixelRatio||1,visualPrefs.quality==='cinematic'?(innerWidth<790?1.5:2):visualPrefs.quality==='balanced'?1.35:1.0);const w=Math.max(1,Math.floor(innerWidth*dpr)),h=Math.max(1,Math.floor(innerHeight*dpr));if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;if(gl)gl.viewport(0,0,w,h)}}window.addEventListener('resize',resize);resize();
 const FRAMES=[{"id":"f-00","jp":"ノヴァ・マンサ","en":"NOVA MANTHA","role":"BINDER / FUSION DESIGN","cost":0,"mark":"01","body":"#5a8067","trim":"#263d38","light":"#e3b481","hp":2700,"atk":191,"def":86,"spd":17,"boost":150,"special":"四翼展開・24ビット殲滅","kind":"binder","origin":"クィン・マンサ × クシャトリヤ","desc":"4枚の重装バインダーを起点に、巨体の圧力と独立ビット群を組み込んだ超大型決戦機。展開装甲、噴射孔、胸部重粒子砲を備える。"},{"id":"f-01","jp":"サザビー・ジオード","en":"SAZABY GEODE","role":"DREAD / FUSION DESIGN","cost":0,"mark":"02","body":"#983b3d","trim":"#422326","light":"#f3af78","hp":2580,"atk":166,"def":83,"spd":17,"boost":105,"special":"装甲展開・重粒子斉射","kind":"dread","origin":"ジ・O × サザビー","desc":"「ジ・O × サザビー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-02","jp":"ニュー・レギオン","en":"NU LEGION","role":"FUNNEL / FUSION DESIGN","cost":0,"mark":"03","body":"#e4e6dc","trim":"#324e79","light":"#b4dff7","hp":1770,"atk":181,"def":51,"spd":26,"boost":137,"special":"遠隔翼砲・全方位包囲","kind":"funnel","origin":"νガンダム × Hi-νガンダム","desc":"「νガンダム × Hi-νガンダム」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-03","jp":"ユニコーン・ヴェスパ","en":"UNICORN VESPER","role":"TRANSFORM / FUSION DESIGN","cost":0,"mark":"04","body":"#d2d7cf","trim":"#b49552","light":"#fba0ca","hp":1970,"atk":176,"def":52,"spd":25,"boost":145,"special":"装甲開放・極光震撃","kind":"transform","origin":"ユニコーン × バンシィ","desc":"「ユニコーン × バンシィ」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-04","jp":"シナンジュ・ヴェール","en":"SINANJU VEIL","role":"BINDER / FUSION DESIGN","cost":0,"mark":"05","body":"#a64f50","trim":"#432b3e","light":"#eec47f","hp":2170,"atk":182,"def":56,"spd":24,"boost":120,"special":"薔薇翼・追撃光弾","kind":"binder","origin":"シナンジュ × クシャトリヤ","desc":"「シナンジュ × クシャトリヤ」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-05","jp":"ゼータ・ファントム","en":"ZETA PHANTOM","role":"FLIGHT / FUSION DESIGN","cost":0,"mark":"06","body":"#e3e6dc","trim":"#335f91","light":"#9beaff","hp":1570,"atk":150,"def":38,"spd":33,"boost":160,"special":"可変翼・超音速一閃","kind":"flight","origin":"Zガンダム × リ・ガズィ","desc":"「Zガンダム × リ・ガズィ」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-06","jp":"ダブル・バスティオン","en":"DOUBLE BASTION","role":"TITAN / FUSION DESIGN","cost":0,"mark":"07","body":"#e0d2a2","trim":"#41577b","light":"#fae18c","hp":2900,"atk":210,"def":92,"spd":14,"boost":113,"special":"三連ハイメガ・要塞射撃","kind":"titan","origin":"ZZガンダム × フルアーマーZZ","desc":"「ZZガンダム × フルアーマーZZ」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-07","jp":"ナイト・ルージュ","en":"NIGHT ROUGE","role":"DREAD / FUSION DESIGN","cost":0,"mark":"08","body":"#963e47","trim":"#3b2834","light":"#ff8e7b","hp":2580,"atk":209,"def":81,"spd":15,"boost":115,"special":"巨砲共鳴・破砕旋回","kind":"dread","origin":"ナイチンゲール × サザビー","desc":"「ナイチンゲール × サザビー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-08","jp":"ラピス・フリーダム","en":"LAPIS FREEDOM","role":"WING / FUSION DESIGN","cost":0,"mark":"09","body":"#e4e8e6","trim":"#263976","light":"#88dfff","hp":1790,"atk":193,"def":49,"spd":34,"boost":175,"special":"光翼一斉砲撃","kind":"wing","origin":"ストライクフリーダム × デスティニー","desc":"「ストライクフリーダム × デスティニー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-09","jp":"ジャスティス・レイザー","en":"JUSTICE RAZOR","role":"BLADE / FUSION DESIGN","cost":0,"mark":"10","body":"#a34764","trim":"#43384f","light":"#f8bc81","hp":1780,"atk":182,"def":48,"spd":32,"boost":156,"special":"四刀旋回・閃光破斬","kind":"blade","origin":"インフィニットジャスティス × イモータルジャスティス","desc":"「インフィニットジャスティス × イモータルジャスティス」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-10","jp":"プロヴィデンス・ゼロ","en":"PROVIDENCE ZERO","role":"FUNNEL / FUSION DESIGN","cost":0,"mark":"11","body":"#cabfba","trim":"#4d4a62","light":"#c7a6fa","hp":2050,"atk":187,"def":57,"spd":23,"boost":144,"special":"量子ドラグーン包囲","kind":"funnel","origin":"プロヴィデンス × レジェンド","desc":"「プロヴィデンス × レジェンド」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-11","jp":"ストライク・レガシー","en":"STRIKE LEGACY","role":"CLASSIC / FUSION DESIGN","cost":0,"mark":"12","body":"#e4e5df","trim":"#3c638c","light":"#ffd784","hp":1720,"atk":142,"def":45,"spd":28,"boost":139,"special":"複合換装・三段斉射","kind":"classic","origin":"エールストライク × インパルス","desc":"「エールストライク × インパルス」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-12","jp":"セラフ・クアンタ","en":"SERAPH QUANTA","role":"HALO / FUSION DESIGN","cost":0,"mark":"13","body":"#e3eded","trim":"#347b8b","light":"#78ffe2","hp":1960,"atk":202,"def":53,"spd":32,"boost":185,"special":"量子環・全方位剣舞","kind":"halo","origin":"ダブルオークアンタ × ダブルオーライザー","desc":"「ダブルオークアンタ × ダブルオーライザー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-13","jp":"ヴァーチェ・レクイエム","en":"VIRTUE REQUIEM","role":"TITAN / FUSION DESIGN","cost":0,"mark":"14","body":"#e5dec8","trim":"#546078","light":"#ffe59c","hp":2880,"atk":197,"def":87,"spd":15,"boost":116,"special":"大口径粒子砲・装甲展開","kind":"titan","origin":"ヴァーチェ × セラヴィー","desc":"「ヴァーチェ × セラヴィー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-14","jp":"エクシア・アクセル","en":"EXIA ACCEL","role":"BLADE / FUSION DESIGN","cost":0,"mark":"15","body":"#e4e3dd","trim":"#385e8c","light":"#8de5fa","hp":1550,"atk":186,"def":38,"spd":39,"boost":175,"special":"光刃八連・超加速","kind":"blade","origin":"エクシア × ダブルオー","desc":"「エクシア × ダブルオー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-15","jp":"アルケー・ファントム","en":"ARCHE PHANTOM","role":"SCYTHE / FUSION DESIGN","cost":0,"mark":"16","body":"#c4a7b1","trim":"#593548","light":"#f89bbc","hp":1840,"atk":199,"def":47,"spd":31,"boost":158,"special":"鎌刃乱舞・獄炎輪","kind":"scythe","origin":"リボーンズ × アルケー","desc":"「リボーンズ × アルケー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-16","jp":"ルシフェル・ゼロ","en":"LUCIFER ZERO","role":"FEATHER / FUSION DESIGN","cost":0,"mark":"17","body":"#e6e1dc","trim":"#3f4b68","light":"#e8d6fa","hp":1880,"atk":199,"def":52,"spd":29,"boost":150,"special":"白夜の光翼・双鎌撃","kind":"feather","origin":"ウイングゼロEW × デスサイズヘル","desc":"「ウイングゼロEW × デスサイズヘル」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-17","jp":"エピオン・ヴァルハラ","en":"EPYON VALHALLA","role":"DRAGON / FUSION DESIGN","cost":0,"mark":"18","body":"#a13f56","trim":"#4c3959","light":"#f2c2a3","hp":1910,"atk":198,"def":56,"spd":31,"boost":153,"special":"双頭竜刃・紅蓮突撃","kind":"dragon","origin":"エピオン × トールギス","desc":"「エピオン × トールギス」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-18","jp":"サテライト・ディアナ","en":"SATELLITE DIANA","role":"CANNON / FUSION DESIGN","cost":0,"mark":"19","body":"#d7ddd2","trim":"#416a81","light":"#f6dd81","hp":1900,"atk":216,"def":49,"spd":26,"boost":151,"special":"双月収束・超砲撃","kind":"cannon","origin":"ガンダムX × ガンダムDX","desc":"「ガンダムX × ガンダムDX」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-19","jp":"エアマスター・レオ","en":"AIRMASTER LEO","role":"FLIGHT / FUSION DESIGN","cost":0,"mark":"20","body":"#cfe0cb","trim":"#547b72","light":"#d6f8b4","hp":1720,"atk":165,"def":46,"spd":33,"boost":155,"special":"高機動絨毯爆撃","kind":"flight","origin":"エアマスター × レオパルド","desc":"「エアマスター × レオパルド」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-20","jp":"ガイア・ブレイザー","en":"GAIA BLAZER","role":"SAMURAI / FUSION DESIGN","cost":0,"mark":"21","body":"#eaded2","trim":"#8f3d46","light":"#ffb46d","hp":1920,"atk":212,"def":51,"spd":31,"boost":167,"special":"紅蓮拳・天衝波","kind":"samurai","origin":"ゴッドガンダム × シャイニングガンダム","desc":"「ゴッドガンダム × シャイニングガンダム」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-21","jp":"ターン・ノクターン","en":"TURN NOCTURNE","role":"ASTRAL / FUSION DESIGN","cost":0,"mark":"22","body":"#d9dbdc","trim":"#485b61","light":"#f3d9c9","hp":2150,"atk":208,"def":65,"spd":26,"boost":181,"special":"月光粒子・装甲分離","kind":"astral","origin":"∀ガンダム × ターンX","desc":"「∀ガンダム × ターンX」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-22","jp":"バルバトス・ヴォルフ","en":"BARBATOS WOLF","role":"BEAST / FUSION DESIGN","cost":0,"mark":"23","body":"#d4cfb3","trim":"#514c40","light":"#dba774","hp":2220,"atk":214,"def":60,"spd":29,"boost":136,"special":"獣牙強襲・鉄槌粉砕","kind":"beast","origin":"バルバトスルプスレクス × グシオンリベイク","desc":"「バルバトスルプスレクス × グシオンリベイク」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-23","jp":"バエル・グレイヴ","en":"BAEL GLAIVE","role":"DUELIST / FUSION DESIGN","cost":0,"mark":"24","body":"#d6dedc","trim":"#405878","light":"#b2dbfd","hp":1950,"atk":211,"def":50,"spd":35,"boost":168,"special":"双剣突貫・騎士衝撃","kind":"duelist","origin":"バエル × キマリスヴィダール","desc":"「バエル × キマリスヴィダール」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-24","jp":"エアリアル・カリバーン","en":"AERIAL CALIBURN","role":"FUNNEL / FUSION DESIGN","cost":0,"mark":"25","body":"#f0e5db","trim":"#536d83","light":"#f6a8ba","hp":1800,"atk":187,"def":43,"spd":34,"boost":173,"special":"星屑ビット・収束照射","kind":"funnel","origin":"エアリアル改修型 × キャリバーン","desc":"「エアリアル改修型 × キャリバーン」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-25","jp":"シュヴァル・ダリル","en":"SCHWARZ DARIL","role":"DUELIST / FUSION DESIGN","cost":0,"mark":"26","body":"#a3a7ac","trim":"#61474b","light":"#ffb0b0","hp":2060,"atk":191,"def":60,"spd":26,"boost":144,"special":"遠隔双槍・剣機展開","kind":"duelist","origin":"シュバルゼッテ × ダリルバルデ","desc":"「シュバルゼッテ × ダリルバルデ」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-26","jp":"オリジン・センチネル","en":"ORIGIN SENTINEL","role":"CLASSIC / FUSION DESIGN","cost":0,"mark":"27","body":"#ded6bf","trim":"#42618b","light":"#f3c26f","hp":1690,"atk":155,"def":46,"spd":27,"boost":137,"special":"狙撃照準・連続砲火","kind":"classic","origin":"RX-78-2 × ジム・スナイパーII","desc":"「RX-78-2 × ジム・スナイパーII」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-27","jp":"ヴィクトリー・アウローラ","en":"VICTORY AURORA","role":"WING / FUSION DESIGN","cost":0,"mark":"28","body":"#e7e3d5","trim":"#4c6374","light":"#b1f6ff","hp":1990,"atk":210,"def":54,"spd":35,"boost":172,"special":"光の翼・加速衝角","kind":"wing","origin":"V2アサルトバスター × ゴトラタン","desc":"「V2アサルトバスター × ゴトラタン」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-28","jp":"クロスボーン・レイヴン","en":"CROSSBONE RAVEN","role":"SCYTHE / FUSION DESIGN","cost":0,"mark":"29","body":"#d2d1ce","trim":"#313b50","light":"#f6c9aa","hp":1830,"atk":201,"def":45,"spd":34,"boost":161,"special":"海賊粒子刃・残像回避","kind":"scythe","origin":"クロスボーンX1 × ガンダムF91","desc":"「クロスボーンX1 × ガンダムF91」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-29","jp":"クスィー・ペーネ","en":"XI PENE","role":"FLIGHT / FUSION DESIGN","cost":0,"mark":"30","body":"#e0d8bf","trim":"#686d73","light":"#a5ebfa","hp":2480,"atk":210,"def":77,"spd":24,"boost":169,"special":"重翼飛行・誘導弾幕","kind":"flight","origin":"Ξガンダム × ペーネロペー","desc":"「Ξガンダム × ペーネロペー」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-30","jp":"ビルド・イグニス","en":"BUILD IGNIS","role":"SAMURAI / FUSION DESIGN","cost":0,"mark":"31","body":"#e4ddd0","trim":"#a34a42","light":"#ffa76b","hp":1690,"atk":200,"def":45,"spd":36,"boost":160,"special":"炎の翼・灼熱連撃","kind":"samurai","origin":"ビルドストライク × トライバーニング","desc":"「ビルドストライク × トライバーニング」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-31","jp":"ジーク・アスタル","en":"ZEKE ASTAL","role":"ASTRAL / FUSION DESIGN","cost":0,"mark":"32","body":"#d4d2d3","trim":"#8e4750","light":"#f5a5c4","hp":1730,"atk":186,"def":44,"spd":36,"boost":169,"special":"異相粒子・赤光閃裂","kind":"astral","origin":"GQuuuuuuX × 赤いガンダム","desc":"「GQuuuuuuX × 赤いガンダム」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-32","jp":"エイジ・アーク","en":"AGE ARC","role":"HALO / FUSION DESIGN","cost":0,"mark":"33","body":"#d8e6e4","trim":"#335e83","light":"#94edff","hp":1970,"atk":198,"def":49,"spd":32,"boost":174,"special":"Cファング・多重衝撃","kind":"halo","origin":"ガンダムAGE-FX × ガンダムAGE-3","desc":"「ガンダムAGE-FX × ガンダムAGE-3」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-33","jp":"レコン・アルカナ","en":"RECON ARCANA","role":"FLIGHT / FUSION DESIGN","cost":0,"mark":"34","body":"#d6ddd8","trim":"#477c87","light":"#ffe9a9","hp":1850,"atk":179,"def":49,"spd":34,"boost":177,"special":"大気圏パック・光子砲","kind":"flight","origin":"G-セルフ × G-アルケイン","desc":"「G-セルフ × G-アルケイン」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-34","jp":"サイコ・サンダーボルト","en":"PSYCHO THUNDER","role":"TITAN / FUSION DESIGN","cost":0,"mark":"35","body":"#577b89","trim":"#48515a","light":"#ff9b8b","hp":2690,"atk":211,"def":87,"spd":19,"boost":138,"special":"四盾機動・電磁集中砲","kind":"titan","origin":"フルアーマーガンダム × サイコ・ザク","desc":"「フルアーマーガンダム × サイコ・ザク」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-35","jp":"ブルー・イフリート","en":"BLUE IFRIT","role":"BEAST / FUSION DESIGN","cost":0,"mark":"36","body":"#43699e","trim":"#243955","light":"#ed8d9d","hp":1770,"atk":188,"def":49,"spd":32,"boost":154,"special":"暴走装甲・紅眼斬撃","kind":"beast","origin":"ブルーディスティニー1号機 × イフリート改","desc":"「ブルーディスティニー1号機 × イフリート改」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-36","jp":"ディープ・ノーチラス","en":"DEEP NAUTILUS","role":"AQUATIC / FUSION DESIGN","cost":0,"mark":"37","body":"#718e8a","trim":"#36515b","light":"#9bdcd7","hp":2320,"atk":175,"def":72,"spd":22,"boost":130,"special":"深海爪・水圧砲","kind":"aquatic","origin":"アッガイ × ズゴックE","desc":"「アッガイ × ズゴックE」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-37","jp":"アビサル・カプール","en":"ABYSSAL KAPOOL","role":"AQUATIC / FUSION DESIGN","cost":0,"mark":"38","body":"#698b9b","trim":"#395666","light":"#b1eff5","hp":2280,"atk":171,"def":71,"spd":22,"boost":131,"special":"六連潜航ミサイル","kind":"aquatic","origin":"ハイゴッグ × カプール","desc":"「ハイゴッグ × カプール」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-38","jp":"フェネクス・ナラティブ","en":"PHENEX NARRATIVE","role":"TRANSFORM / FUSION DESIGN","cost":0,"mark":"39","body":"#cbb777","trim":"#665a55","light":"#ffe79a","hp":1710,"atk":202,"def":44,"spd":36,"boost":188,"special":"不死鳥装甲・極光粒子","kind":"transform","origin":"フェネクス × ナラティブガンダム","desc":"「フェネクス × ナラティブガンダム」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"},{"id":"f-39","jp":"ステイメン・アトラス","en":"STAMEN ATLAS","role":"TITAN / FUSION DESIGN","cost":0,"mark":"40","body":"#dad5cb","trim":"#586174","light":"#f8db98","hp":2650,"atk":224,"def":85,"spd":19,"boost":132,"special":"巨大コンテナ・核熱放射","kind":"titan","origin":"ガンダム試作3号機 × ガンダム試作2号機","desc":"「ガンダム試作3号機 × ガンダム試作2号機」の造形要素を再解釈した非公式・独立設計の融合型機動兵器。専用の外装シルエットと特殊攻撃を搭載。"}];
 const STAGES=[{"id":"op-01","name":"工廠跡・白雨","nameEn":"TERRESTRIAL FRONT / 01","subtitle":"地上の残響","desc":"廃棄された沿岸工廠を制圧せよ。第4波の大型指揮機を破壊し、拠点を確保する。","reward":1550,"sky":"#465e66","ground":"#364448","soil":"#252f32","fog":[0.13,0.18,0.19],"enemies":["scout","trooper","sniper"],"boss":"残骸の巨兵","bossColor":"#d7d8c2","theme":0,"sector":0,"threat":1},{"id":"op-02","name":"暁の廃都市","nameEn":"TERRESTRIAL FRONT / 02","subtitle":"地上の残響","desc":"日の出とともに首都跡へ侵入。第4波の大型指揮機を破壊し、拠点を確保する。","reward":2500,"sky":"#101b3c","ground":"#192338","soil":"#101828","fog":[0.06,0.09,0.16],"enemies":["scout","trooper","sniper"],"boss":"紅蓮の前衛","bossColor":"#8cd3ea","theme":2,"sector":0,"threat":1},{"id":"op-03","name":"砂丘の環状城","nameEn":"TERRESTRIAL FRONT / 03","subtitle":"地上の残響","desc":"熱砂に沈んだ旧王都。第4波の大型指揮機を破壊し、拠点を確保する。","reward":3550,"sky":"#a88d6d","ground":"#80694e","soil":"#665137","fog":[0.4,0.28,0.18],"enemies":["scout","trooper","sniper"],"boss":"砂塵の巨砲","bossColor":"#efbd82","theme":1,"sector":0,"threat":1},{"id":"op-04","name":"氷壁の監視所","nameEn":"TERRESTRIAL FRONT / 04","subtitle":"地上の残響","desc":"北限の警戒基地へ接近せよ。第4波の大型指揮機を破壊し、拠点を確保する。","reward":4750,"sky":"#a4bece","ground":"#8195a2","soil":"#576775","fog":[0.37,0.48,0.54],"enemies":["scout","trooper","sniper"],"boss":"極光の番人","bossColor":"#cdeff6","theme":3,"sector":0,"threat":1},{"id":"op-05","name":"黒松の密林","nameEn":"TERRESTRIAL FRONT / 05","subtitle":"地上の残響","desc":"緑の迷宮に眠る旧型機。第4波の大型指揮機を破壊し、拠点を確保する。","reward":6000,"sky":"#486348","ground":"#365044","soil":"#23382d","fog":[0.13,0.23,0.14],"enemies":["scout","trooper","sniper"],"boss":"森羅の狩人","bossColor":"#b8e3ae","theme":9,"sector":0,"threat":1},{"id":"op-06","name":"海峡の砲台","nameEn":"TERRESTRIAL FRONT / 06","subtitle":"地上の残響","desc":"海岸の多層防塁を突破。第4波の大型指揮機を破壊し、拠点を確保する。","reward":7300,"sky":"#527287","ground":"#364e60","soil":"#263647","fog":[0.15,0.22,0.28],"enemies":["scout","trooper","sniper"],"boss":"深海の砲将","bossColor":"#b2dfef","theme":10,"sector":0,"threat":2},{"id":"op-07","name":"巨大地下水路","nameEn":"TERRESTRIAL FRONT / 07","subtitle":"地上の残響","desc":"沈没した巨大都市の下層。第4波の大型指揮機を破壊し、拠点を確保する。","reward":8700,"sky":"#24516b","ground":"#2a5b68","soil":"#173644","fog":[0.08,0.22,0.3],"enemies":["scout","trooper","sniper"],"boss":"水域の悪魔","bossColor":"#9be1ed","theme":8,"sector":0,"threat":2},{"id":"op-08","name":"原始の鉱山","nameEn":"TERRESTRIAL FRONT / 08","subtitle":"地上の残響","desc":"古い鉱坑を巡る資源紛争。第4波の大型指揮機を破壊し、拠点を確保する。","reward":10150,"sky":"#465e66","ground":"#364448","soil":"#252f32","fog":[0.13,0.18,0.19],"enemies":["scout","trooper","sniper"],"boss":"岩盤の処刑機","bossColor":"#d7d8c2","theme":0,"sector":0,"threat":2},{"id":"op-09","name":"紫電ネオン街","nameEn":"CITIES & FOUNDRIES / 01","subtitle":"都市と工業圏","desc":"夜間照明に覆われた産業街。第4波の大型指揮機を破壊し、拠点を確保する。","reward":11650,"sky":"#101b3c","ground":"#192338","soil":"#101828","fog":[0.06,0.09,0.16],"enemies":["scout","trooper","sniper"],"boss":"電脳追跡者","bossColor":"#8cd3ea","theme":2,"sector":1,"threat":2},{"id":"op-10","name":"赤熱溶鉱炉","nameEn":"CITIES & FOUNDRIES / 02","subtitle":"都市と工業圏","desc":"炉心の流動熱を遮断せよ。第4波の大型指揮機を破壊し、拠点を確保する。","reward":13200,"sky":"#713625","ground":"#3e2b2d","soil":"#211a1e","fog":[0.32,0.11,0.07],"enemies":["scout","trooper","sniper"],"boss":"熔鉄の将軍","bossColor":"#fe9a56","theme":4,"sector":1,"threat":2},{"id":"op-11","name":"崩落高速道路","nameEn":"CITIES & FOUNDRIES / 03","subtitle":"都市と工業圏","desc":"高架の複合ジャンクション。第4波の大型指揮機を破壊し、拠点を確保する。","reward":14850,"sky":"#465e66","ground":"#364448","soil":"#252f32","fog":[0.13,0.18,0.19],"enemies":["scout","trooper","sniper"],"boss":"舗装の騎士","bossColor":"#d7d8c2","theme":0,"sector":1,"threat":3},{"id":"op-12","name":"旧共和国議事堂","nameEn":"CITIES & FOUNDRIES / 04","subtitle":"都市と工業圏","desc":"砲撃下の歴史的街区。第4波の大型指揮機を破壊し、拠点を確保する。","reward":16500,"sky":"#7d675f","ground":"#554d4a","soil":"#373137","fog":[0.29,0.22,0.19],"enemies":["scout","trooper","sniper","brute"],"boss":"黄金の守衛","bossColor":"#fed6a4","theme":12,"sector":1,"threat":3},{"id":"op-13","name":"雷雲の空港","nameEn":"CITIES & FOUNDRIES / 05","subtitle":"都市と工業圏","desc":"嵐が覆う大型滑走路。第4波の大型指揮機を破壊し、拠点を確保する。","reward":18200,"sky":"#26314d","ground":"#24384c","soil":"#16293b","fog":[0.11,0.16,0.28],"enemies":["scout","trooper","sniper","brute"],"boss":"迅雷の翼機","bossColor":"#aff3ff","theme":14,"sector":1,"threat":3},{"id":"op-14","name":"深夜コンテナ港","nameEn":"CITIES & FOUNDRIES / 06","subtitle":"都市と工業圏","desc":"海運コンテナを要塞化した港。第4波の大型指揮機を破壊し、拠点を確保する。","reward":19950,"sky":"#527287","ground":"#364e60","soil":"#263647","fog":[0.15,0.22,0.28],"enemies":["scout","trooper","sniper","brute"],"boss":"埠頭の亡霊","bossColor":"#b2dfef","theme":10,"sector":1,"threat":3},{"id":"op-15","name":"黄金砂の都市","nameEn":"CITIES & FOUNDRIES / 07","subtitle":"都市と工業圏","desc":"陽炎に消える砂漠首都。第4波の大型指揮機を破壊し、拠点を確保する。","reward":21750,"sky":"#a88d6d","ground":"#80694e","soil":"#665137","fog":[0.4,0.28,0.18],"enemies":["scout","trooper","sniper","brute"],"boss":"黄金の方舟","bossColor":"#efbd82","theme":1,"sector":1,"threat":3},{"id":"op-16","name":"永久凍土発電所","nameEn":"CITIES & FOUNDRIES / 08","subtitle":"都市と工業圏","desc":"凍結した融合炉を奪還。第4波の大型指揮機を破壊し、拠点を確保する。","reward":23600,"sky":"#a4bece","ground":"#8195a2","soil":"#576775","fog":[0.37,0.48,0.54],"enemies":["scout","trooper","sniper","brute"],"boss":"氷河の守護者","bossColor":"#cdeff6","theme":3,"sector":1,"threat":4},{"id":"op-17","name":"雲海の浮遊島","nameEn":"SKY & OCEAN / 01","subtitle":"天空と海洋","desc":"超高高度に浮かぶ人工浮島。第4波の大型指揮機を破壊し、拠点を確保する。","reward":25500,"sky":"#161e38","ground":"#777a85","soil":"#4a5263","fog":[0.05,0.07,0.14],"enemies":["scout","trooper","sniper","brute"],"boss":"蒼空の魔鳥","bossColor":"#e7dede","theme":11,"sector":2,"threat":4},{"id":"op-18","name":"海底の天蓋都市","nameEn":"SKY & OCEAN / 02","subtitle":"天空と海洋","desc":"透明なドームに閉ざされた深海。第4波の大型指揮機を破壊し、拠点を確保する。","reward":27400,"sky":"#24516b","ground":"#2a5b68","soil":"#173644","fog":[0.08,0.22,0.3],"enemies":["scout","trooper","sniper","brute"],"boss":"水晶の海王","bossColor":"#9be1ed","theme":8,"sector":2,"threat":4},{"id":"op-19","name":"天空寺院跡","nameEn":"SKY & OCEAN / 03","subtitle":"天空と海洋","desc":"大気の上層に眠る聖域。第4波の大型指揮機を破壊し、拠点を確保する。","reward":29350,"sky":"#7d675f","ground":"#554d4a","soil":"#373137","fog":[0.29,0.22,0.19],"enemies":["scout","trooper","sniper","brute"],"boss":"天穹の司祭","bossColor":"#fed6a4","theme":12,"sector":2,"threat":4},{"id":"op-20","name":"暴風の海上城塞","nameEn":"SKY & OCEAN / 04","subtitle":"天空と海洋","desc":"荒波と台風の中央に築かれた防壁。第4波の大型指揮機を破壊し、拠点を確保する。","reward":31350,"sky":"#26314d","ground":"#24384c","soil":"#16293b","fog":[0.11,0.16,0.28],"enemies":["scout","trooper","sniper","brute"],"boss":"嵐の巨蟹","bossColor":"#aff3ff","theme":14,"sector":2,"threat":4},{"id":"op-21","name":"密林巨大樹海","nameEn":"SKY & OCEAN / 05","subtitle":"天空と海洋","desc":"上空を塞ぐ巨大樹群。第4波の大型指揮機を破壊し、拠点を確保する。","reward":33400,"sky":"#486348","ground":"#365044","soil":"#23382d","fog":[0.13,0.23,0.14],"enemies":["scout","trooper","sniper","brute"],"boss":"緑影の巨虫","bossColor":"#b8e3ae","theme":9,"sector":2,"threat":5},{"id":"op-22","name":"白亜の月面港","nameEn":"SKY & OCEAN / 06","subtitle":"天空と海洋","desc":"静寂と無重力の輸送基地。第4波の大型指揮機を破壊し、拠点を確保する。","reward":35450,"sky":"#161e38","ground":"#777a85","soil":"#4a5263","fog":[0.05,0.07,0.14],"enemies":["scout","trooper","sniper","brute"],"boss":"月下の槍騎士","bossColor":"#e7dede","theme":11,"sector":2,"threat":5},{"id":"op-23","name":"太陽帆の回廊","nameEn":"SKY & OCEAN / 07","subtitle":"天空と海洋","desc":"巨大な光帆で覆われた軌道施設。第4波の大型指揮機を破壊し、拠点を確保する。","reward":37550,"sky":"#080f27","ground":"#314259","soil":"#111a2e","fog":[0.025,0.055,0.13],"enemies":["scout","trooper","sniper","brute"],"boss":"白光の船長","bossColor":"#65c8f6","theme":5,"sector":2,"threat":5},{"id":"op-24","name":"蜃気楼の峡谷","nameEn":"SKY & OCEAN / 08","subtitle":"天空と海洋","desc":"天を切り裂く断層の迷路。第4波の大型指揮機を破壊し、拠点を確保する。","reward":39650,"sky":"#a88d6d","ground":"#80694e","soil":"#665137","fog":[0.4,0.28,0.18],"enemies":["scout","trooper","sniper","brute"],"boss":"断崖の双刃","bossColor":"#efbd82","theme":1,"sector":2,"threat":5},{"id":"op-25","name":"静止軌道リング","nameEn":"ORBITAL BATTLES / 01","subtitle":"宇宙機甲戦域","desc":"外周に沿って展開する防衛網。第4波の大型指揮機を破壊し、拠点を確保する。","reward":41800,"sky":"#080f27","ground":"#314259","soil":"#111a2e","fog":[0.025,0.055,0.13],"enemies":["scout","trooper","sniper","brute"],"boss":"軌道の裁定機","bossColor":"#65c8f6","theme":5,"sector":3,"threat":5},{"id":"op-26","name":"小惑星採掘場","nameEn":"ORBITAL BATTLES / 02","subtitle":"宇宙機甲戦域","desc":"岩塊の表面に張りつく基地。第4波の大型指揮機を破壊し、拠点を確保する。","reward":44000,"sky":"#090d27","ground":"#40405b","soil":"#202038","fog":[0.035,0.04,0.13],"enemies":["scout","trooper","sniper","brute"],"boss":"星屑の採掘王","bossColor":"#aab5f4","theme":15,"sector":3,"threat":6},{"id":"op-27","name":"衛星の重力工廠","nameEn":"ORBITAL BATTLES / 03","subtitle":"宇宙機甲戦域","desc":"巨大な回転式組立施設。第4波の大型指揮機を破壊し、拠点を確保する。","reward":46200,"sky":"#182a2a","ground":"#344e4a","soil":"#172d2d","fog":[0.06,0.13,0.12],"enemies":["scout","trooper","sniper","brute"],"boss":"白鋼の監督官","bossColor":"#85e5d0","theme":13,"sector":3,"threat":6},{"id":"op-28","name":"蒼い惑星の夜側","nameEn":"ORBITAL BATTLES / 04","subtitle":"宇宙機甲戦域","desc":"都市灯の遠景を望む近地軌道。第4波の大型指揮機を破壊し、拠点を確保する。","reward":48450,"sky":"#080f27","ground":"#314259","soil":"#111a2e","fog":[0.025,0.055,0.13],"enemies":["scout","trooper","sniper","brute"],"boss":"蒼夜の監視機","bossColor":"#65c8f6","theme":5,"sector":3,"threat":6},{"id":"op-29","name":"星間貨物船墓場","nameEn":"ORBITAL BATTLES / 05","subtitle":"宇宙機甲戦域","desc":"軌道上に漂う輸送艦の残骸。第4波の大型指揮機を破壊し、拠点を確保する。","reward":50750,"sky":"#090d27","ground":"#40405b","soil":"#202038","fog":[0.035,0.04,0.13],"enemies":["scout","trooper","sniper","brute"],"boss":"屍船の暴君","bossColor":"#aab5f4","theme":15,"sector":3,"threat":6},{"id":"op-30","name":"紫雲星団の門","nameEn":"ORBITAL BATTLES / 06","subtitle":"宇宙機甲戦域","desc":"観測不能な重力空洞。第4波の大型指揮機を破壊し、拠点を確保する。","reward":53050,"sky":"#2b1645","ground":"#342b58","soil":"#201731","fog":[0.1,0.045,0.15],"enemies":["scout","trooper","sniper","ace"],"boss":"星雲の魔神","bossColor":"#d38ae5","theme":6,"sector":3,"threat":6},{"id":"op-31","name":"凍結彗星の核","nameEn":"ORBITAL BATTLES / 07","subtitle":"宇宙機甲戦域","desc":"氷粒を撒き散らす微小天体。第4波の大型指揮機を破壊し、拠点を確保する。","reward":55350,"sky":"#a4bece","ground":"#8195a2","soil":"#576775","fog":[0.37,0.48,0.54],"enemies":["scout","trooper","sniper","ace"],"boss":"彗核の狙撃手","bossColor":"#cdeff6","theme":3,"sector":3,"threat":7},{"id":"op-32","name":"月裏面クレーター","nameEn":"ORBITAL BATTLES / 08","subtitle":"宇宙機甲戦域","desc":"灰の静寂に包まれた旧戦線。第4波の大型指揮機を破壊し、拠点を確保する。","reward":57750,"sky":"#161e38","ground":"#777a85","soil":"#4a5263","fog":[0.05,0.07,0.14],"enemies":["scout","trooper","sniper","ace"],"boss":"沈黙の大将","bossColor":"#e7dede","theme":11,"sector":3,"threat":7},{"id":"op-33","name":"黒曜石の回廊","nameEn":"FORBIDDEN ZONES / 01","subtitle":"禁域と異常空間","desc":"巨大な石柱が伸びる禁足地。第4波の大型指揮機を破壊し、拠点を確保する。","reward":60100,"sky":"#7d675f","ground":"#554d4a","soil":"#373137","fog":[0.29,0.22,0.19],"enemies":["scout","trooper","sniper","ace"],"boss":"黒曜の剣王","bossColor":"#fed6a4","theme":12,"sector":4,"threat":7},{"id":"op-34","name":"崩壊した人工太陽","nameEn":"FORBIDDEN ZONES / 02","subtitle":"禁域と異常空間","desc":"施設炉心が暴走する極限域。第4波の大型指揮機を破壊し、拠点を確保する。","reward":62500,"sky":"#713625","ground":"#3e2b2d","soil":"#211a1e","fog":[0.32,0.11,0.07],"enemies":["scout","trooper","sniper","ace"],"boss":"獄炎の炉心","bossColor":"#fe9a56","theme":4,"sector":4,"threat":7},{"id":"op-35","name":"流星雨の墓標","nameEn":"FORBIDDEN ZONES / 03","subtitle":"禁域と異常空間","desc":"降り注ぐ隕石の地上跡地。第4波の大型指揮機を破壊し、拠点を確保する。","reward":64950,"sky":"#090d27","ground":"#40405b","soil":"#202038","fog":[0.035,0.04,0.13],"enemies":["scout","trooper","sniper","ace"],"boss":"流星の司令塔","bossColor":"#aab5f4","theme":15,"sector":4,"threat":7},{"id":"op-36","name":"金属砂嵐の大平原","nameEn":"FORBIDDEN ZONES / 04","subtitle":"禁域と異常空間","desc":"鉄砂で覆われた実験領域。第4波の大型指揮機を破壊し、拠点を確保する。","reward":67400,"sky":"#a88d6d","ground":"#80694e","soil":"#665137","fog":[0.4,0.28,0.18],"enemies":["scout","trooper","sniper","ace"],"boss":"磁界の幻獣","bossColor":"#efbd82","theme":1,"sector":4,"threat":8},{"id":"op-37","name":"深紅の電磁監獄","nameEn":"FORBIDDEN ZONES / 05","subtitle":"禁域と異常空間","desc":"計算機兵器が巡回する巨大牢獄。第4波の大型指揮機を破壊し、拠点を確保する。","reward":69900,"sky":"#182a2a","ground":"#344e4a","soil":"#172d2d","fog":[0.06,0.13,0.12],"enemies":["scout","trooper","sniper","ace"],"boss":"朱の執行者","bossColor":"#85e5d0","theme":13,"sector":4,"threat":8},{"id":"op-38","name":"星屑教会の頂点","nameEn":"FORBIDDEN ZONES / 06","subtitle":"禁域と異常空間","desc":"古い祈祷所を改造した軌道城。第4波の大型指揮機を破壊し、拠点を確保する。","reward":72400,"sky":"#7d675f","ground":"#554d4a","soil":"#373137","fog":[0.29,0.22,0.19],"enemies":["scout","trooper","sniper","ace"],"boss":"紅星の司祭","bossColor":"#fed6a4","theme":12,"sector":4,"threat":8},{"id":"op-39","name":"時の裂け目","nameEn":"FORBIDDEN ZONES / 07","subtitle":"禁域と異常空間","desc":"歪む観測施設と虚数空間。第4波の大型指揮機を破壊し、拠点を確保する。","reward":74950,"sky":"#2b1645","ground":"#342b58","soil":"#201731","fog":[0.1,0.045,0.15],"enemies":["scout","trooper","sniper","ace"],"boss":"秒針の皇帝","bossColor":"#d38ae5","theme":6,"sector":4,"threat":8},{"id":"op-40","name":"幽霊衛星の内核","nameEn":"FORBIDDEN ZONES / 08","subtitle":"禁域と異常空間","desc":"航行不能の廃棄ステーション。第4波の大型指揮機を破壊し、拠点を確保する。","reward":77500,"sky":"#182a2a","ground":"#344e4a","soil":"#172d2d","fog":[0.06,0.13,0.12],"enemies":["scout","trooper","sniper","ace"],"boss":"無貌の寄生機","bossColor":"#85e5d0","theme":13,"sector":4,"threat":8},{"id":"op-41","name":"帝国機甲の外門","nameEn":"FINAL CAMPAIGN / 01","subtitle":"最終戦線・終焉","desc":"大規模な防壁と前線堡塁。第4波の大型指揮機を破壊し、拠点を確保する。","reward":80050,"sky":"#465e66","ground":"#364448","soil":"#252f32","fog":[0.13,0.18,0.19],"enemies":["scout","trooper","sniper","ace"],"boss":"門番グラディウス","bossColor":"#d7d8c2","theme":0,"sector":5,"threat":9},{"id":"op-42","name":"万象重力の聖域","nameEn":"FINAL CAMPAIGN / 02","subtitle":"最終戦線・終焉","desc":"重力制御された異常空間。第4波の大型指揮機を破壊し、拠点を確保する。","reward":82650,"sky":"#2b1645","ground":"#342b58","soil":"#201731","fog":[0.1,0.045,0.15],"enemies":["scout","trooper","sniper","ace"],"boss":"重力司令アトラス","bossColor":"#d38ae5","theme":6,"sector":5,"threat":9},{"id":"op-43","name":"真紅の指揮所","nameEn":"FINAL CAMPAIGN / 03","subtitle":"最終戦線・終焉","desc":"中枢通信の最高統制所。第4波の大型指揮機を破壊し、拠点を確保する。","reward":85300,"sky":"#101b3c","ground":"#192338","soil":"#101828","fog":[0.06,0.09,0.16],"enemies":["scout","trooper","sniper","ace"],"boss":"紅魔オルド","bossColor":"#8cd3ea","theme":2,"sector":5,"threat":9},{"id":"op-44","name":"蒼天に沈む王都","nameEn":"FINAL CAMPAIGN / 04","subtitle":"最終戦線・終焉","desc":"朽ちゆく都の最終戦域。第4波の大型指揮機を破壊し、拠点を確保する。","reward":87900,"sky":"#527287","ground":"#364e60","soil":"#263647","fog":[0.15,0.22,0.28],"enemies":["scout","trooper","sniper","ace"],"boss":"蒼き玉座の剣","bossColor":"#b2dfef","theme":10,"sector":5,"threat":9},{"id":"op-45","name":"機械惑星の外殻","nameEn":"FINAL CAMPAIGN / 05","subtitle":"最終戦線・終焉","desc":"超巨大構造体の外壁。第4波の大型指揮機を破壊し、拠点を確保する。","reward":90600,"sky":"#182a2a","ground":"#344e4a","soil":"#172d2d","fog":[0.06,0.13,0.12],"enemies":["scout","trooper","sniper","ace"],"boss":"鉄殻の暴君","bossColor":"#85e5d0","theme":13,"sector":5,"threat":9},{"id":"op-46","name":"漆黒の虚空回廊","nameEn":"FINAL CAMPAIGN / 06","subtitle":"最終戦線・終焉","desc":"空間情報が断続する虚空。第4波の大型指揮機を破壊し、拠点を確保する。","reward":93250,"sky":"#090d27","ground":"#40405b","soil":"#202038","fog":[0.035,0.04,0.13],"enemies":["scout","trooper","sniper","ace"],"boss":"暗黒の審判者","bossColor":"#aab5f4","theme":15,"sector":5,"threat":10},{"id":"op-47","name":"絶対零度の玉座","nameEn":"FINAL CAMPAIGN / 07","subtitle":"最終戦線・終焉","desc":"氷結された最終機甲王宮。第4波の大型指揮機を破壊し、拠点を確保する。","reward":96000,"sky":"#a4bece","ground":"#8195a2","soil":"#576775","fog":[0.37,0.48,0.54],"enemies":["scout","trooper","sniper","ace"],"boss":"永劫の白騎士","bossColor":"#cdeff6","theme":3,"sector":5,"threat":10},{"id":"op-48","name":"最終作戦・黒陽","nameEn":"FINAL CAMPAIGN / 08","subtitle":"最終戦線・終焉","desc":"全機体の設計が交錯する終局。第4波の大型指揮機を破壊し、拠点を確保する。","reward":98700,"sky":"#422132","ground":"#38303b","soil":"#1a1827","fog":[0.18,0.08,0.12],"enemies":["scout","trooper","sniper","ace"],"boss":"終焉皇機 ECLIPSE","bossColor":"#f6a5ad","theme":7,"sector":5,"threat":10}];
 const SECTORS=[{"ja":"地上の残響","en":"TERRESTRIAL FRONT"},{"ja":"都市と工業圏","en":"CITIES & FOUNDRIES"},{"ja":"天空と海洋","en":"SKY & OCEAN"},{"ja":"宇宙機甲戦域","en":"ORBITAL BATTLES"},{"ja":"禁域と異常空間","en":"FORBIDDEN ZONES"},{"ja":"最終戦線・終焉","en":"FINAL CAMPAIGN"}];
@@ -126,7 +281,7 @@ function newSave(){let mechs={};for(let m of FRAMES)mechs[m.id]={owned:true,up:{
 function validateSave(obj){let fresh=newSave();if(!obj||typeof obj!=='object')return fresh;fresh.credits=clamp(Math.floor(Number(obj.credits)||0),0,1e12);fresh.earned=clamp(Math.floor(Number(obj.earned)||0),0,1e12);fresh.xp=clamp(Math.floor(Number(obj.xp)||0),0,1e12);for(let k of ['totalKills','bossKills','wins','losses','damage'])fresh[k]=clamp(Math.floor(Number(obj[k])||0),0,1e10);fresh.usedFrames=Array.isArray(obj.usedFrames)?obj.usedFrames.filter(k=>FRAMES.some(f=>f.id===k)).slice(0,FRAMES.length):[];fresh.best=STAGES.map((_,i)=>clamp(Number(obj.best?.[i])||0,0,3));for(let m of FRAMES){let d=obj.mechs?.[m.id];if(d){fresh.mechs[m.id].owned=true;for(let u of UPGRADES)fresh.mechs[m.id].up[u.id]=clamp(Math.floor(Number(d.up?.[u.id])||0),0,30)}}if(FRAMES.some(m=>m.id===obj.selected&&fresh.mechs[m.id].owned))fresh.selected=obj.selected;if(obj.achievements&&typeof obj.achievements==='object')for(let [k] of ACHIEVEMENTS)fresh.achievements[k]=!!obj.achievements[k];return fresh}
 let saved;try{saved=validateSave(JSON.parse(localStorage.getItem(SAVEKEY)||'null')||newSave())}catch{saved=newSave()}
 function store(){try{localStorage.setItem(SAVEKEY,JSON.stringify(saved))}catch(e){console.warn('save failed',e)}};
-let activeFrame=saved.selected,missionSector=0,stageIndex=0,currentTab='garage',mode='menu',player=null,enemies=[],projectiles=[],particles=[],obstacles=[],props=[],stars=[],battleTime=0,wave=0,kills=0,waveKills=0,sessionReward=0,waveCool=0,combo=0,lockedId=0,sceneTheme=0,camYaw=0,camPitch=.35,cameraPos=[11,10,-20],gameTime=0,lastTime=performance.now(),fps=60,pausedFrom='battle';
+let activeFrame=saved.selected,missionSector=-1,stageIndex=0,currentTab='garage',mode='menu',player=null,enemies=[],projectiles=[],particles=[],obstacles=[],props=[],stars=[],battleTime=0,wave=0,kills=0,waveKills=0,sessionReward=0,waveCool=0,combo=0,lockedId=0,sceneTheme=0,camYaw=0,camPitch=.35,cameraPos=[11,10,-20],gameTime=0,lastTime=performance.now(),fps=60,pausedFrom='battle';
 let keys=Object.create(null),touchKeys=Object.create(null),stick={x:0,y:0},mouseShoot=false,mouseShield=false,dragging=false,lastMouse={x:0,y:0};let nextId=1;let audio=null;
 
 /* --- Cross-device rooms: real WebSocket transport, 2–4 pilots. --- */
@@ -209,7 +364,7 @@ function netReceive(m){if(!m||typeof m.type!=='string')return;
   if(net.inMatch)for(let member of net.members){if(member.id===net.id)continue;remoteUnit(member)}
   updateNetPanel();if(currentTab==='missions')updateMissions();break;
  case 'start':netStartMatch(m);break;
- case 'position':{if(!net.inMatch||m.id===net.id)return;let mem=net.members.find(a=>a.id===m.id)||{id:m.id,frame:m.frame,name:m.name};let u=remoteUnit({...mem,...m});u.anim=(u.anim||0)+.05;if(net.mode==='versus')rebuildVersusEnemies();break}
+ case 'position':{if(!net.inMatch||m.id===net.id)return;let mem=net.members.find(a=>a.id===m.id)||{id:m.id,frame:m.frame,name:m.name};let prior=net.remote.get(m.id),oldX=prior?.renderX??prior?.x,oldZ=prior?.renderZ??prior?.z,oldRot=prior?.renderRot??prior?.rot;let u=remoteUnit({...mem,...m});u.renderX=oldX??u.x;u.renderZ=oldZ??u.z;u.renderRot=oldRot??u.rot;u.anim=(u.anim||0)+.05;if(net.mode==='versus')rebuildVersusEnemies();break}
  case 'enemySync':receiveEnemySnapshot(m);break;
  case 'enemyHit':if(net.inMatch&&net.mode==='coop'&&net.isHost){const e=enemies.find(e=>e.id===m.enemyId);if(e)damageEnemy(e,Math.min(2000,Math.max(1,+m.amount||1)))}break;
  case 'health':{if(!net.inMatch)return;if(m.id===net.id&&player){player.hp=Math.max(0,m.hp);if(player.hp===0)notify('機体が行動不能になりました',true)}else{const u=net.remote.get(m.id);if(u)u.hp=m.hp}updateHUD();break}
@@ -243,10 +398,10 @@ function unitStats(m){let up=saved.mechs[m.id]?.up||{};return{hp:Math.round(m.hp
 function costOf(m,kind){let lv=saved.mechs[m.id].up[kind],scale=1+m.cost/38000;return Math.round((230+115*Math.pow(lv+1,1.65))*scale/10)*10}
 function moneyTxt(n){return Math.round(n).toLocaleString('ja-JP')}
 function updateTop(){ $('credits').textContent=moneyTxt(saved.credits);$('rankStatus').textContent='RANK '+String(1+Math.floor(Math.sqrt(saved.xp/80))).padStart(2,'0') }
-function showTab(tab){currentTab=tab;for(let t of ['garage','missions','upgrades','records','helpPanel','multiplayer'])$(t).style.display=t===tab?'block':'none';document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));if(tab==='garage')updateGarage();if(tab==='missions')updateMissions();if(tab==='upgrades')updateUpgrades();if(tab==='records')updateRecords();if(tab==='multiplayer')updateNetPanel()}
+function showTab(tab){currentTab=tab;for(let t of ['garage','missions','upgrades','records','helpPanel','multiplayer','workshop'])$(t).style.display=t===tab?'block':'none';document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab));if(tab==='garage')updateGarage();if(tab==='missions')updateMissions();if(tab==='upgrades')updateUpgrades();if(tab==='records')updateRecords();if(tab==='multiplayer')updateNetPanel()}
 function updateGarage(){updateTop();$('mechList').innerHTML=FRAMES.filter(m=>(m.jp+' '+m.en+' '+m.origin).toLowerCase().includes(($('frameSearch')?.value||'').toLowerCase())).map(m=>{let own=saved.mechs[m.id].owned;return `<button type="button" class="mechcard ${m.id===activeFrame?'active':''}" data-mech="${m.id}"><span class="mechmark" style="color:${m.light};background:${m.trim}77">${m.mark}</span><span><span class="mech-name">${m.jp}</span><span class="mech-code" style="display:block">${m.en}</span></span><span class="${own?'owned':'locked'}">${own?(saved.selected===m.id?'✓ ACTIVE':'✓ OWNED'):'◆ '+moneyTxt(m.cost)}</span></button>`}).join('');const m=selectedFrame(),s=unitStats(m);$('mechHero').textContent=m.en;$('mechSubtitle').textContent=m.role;$('mechDesc').textContent=m.desc+'　｜ 造形モチーフ：'+m.origin;$('mechSpecial').textContent='SPECIAL : '+m.special;
 let stats=[['耐久',s.hp,4000],['火力',s.atk,550],['装甲',s.def,290],['機動',s.spd,72],['出力',s.boost,510]];$('mechStats').innerHTML=stats.map(([n,v,max])=>`<div class="statrow"><span>${n}</span><span class="track"><span class="fill" style="display:block;width:${Math.min(100,v/max*100)}%"></span></span><b class="mono">${Math.round(v)}</b></div>`).join('');let own=saved.mechs[m.id].owned;$('buyButton').classList.add('hidden');$('buyButton').textContent='◆ '+moneyTxt(m.cost)+' CR で購入';$('buyButton').disabled=saved.credits<m.cost;$('equipButton').classList.toggle('hidden',!own);$('equipButton').textContent=saved.selected===m.id?'✓ 使用中':'この機体を出撃機に設定';$('equipButton').disabled=saved.selected===m.id;showSourceStatus(m.id)}
-function updateMissions(){updateTop();$('missionGrid').innerHTML=STAGES.map((s,i)=>({s,i})).filter(({s})=>missionSector===-1||s.sector===missionSector).map(({s,i})=>{let can=true,clear=saved.best[i]>0;return `<div class="mission ${i===stageIndex?'selected':''} ${can?'':'lock'}" data-mission="${i}"><span class="num">0${i+1}</span><span class="sub">OPERATION / 0${i+1}</span><h3>${s.name}</h3><p>${s.subtitle}</p><div class="status">${clear?'✓ CLEAR':can?'● 出撃可能':'🔒 前作戦をクリアで解放'}</div></div>`}).join('');let s=STAGES[stageIndex],can=true;$('missionTitle').textContent='OP '+String(stageIndex+1).padStart(2,'0')+' — '+s.nameEn;$('missionDescription').textContent=s.desc;$('missionReward').textContent='作戦報酬：◆ '+moneyTxt(s.reward)+' CR + 撃破ボーナス';$('sortieButton').disabled=!can}
+function updateMissions(){updateTop();$('missionGrid').innerHTML=STAGES.map((s,i)=>({s,i})).filter(({s})=>missionSector===-1||s.sector===missionSector).map(({s,i})=>{let can=true,clear=saved.best[i]>0;return `<div class="mission sector-${s.sector} ${i===stageIndex?'selected':''} ${can?'':'lock'}" data-mission="${i}"><span class="num">0${i+1}</span><span class="sub">OPERATION / 0${i+1}</span><h3>${s.name}</h3><p>${s.subtitle}</p><div class="status">${clear?'✓ CLEAR':can?'● 出撃可能':'🔒 前作戦をクリアで解放'}</div></div>`}).join('');let s=STAGES[stageIndex],can=true;$('missionTitle').textContent='OP '+String(stageIndex+1).padStart(2,'0')+' — '+s.nameEn;$('missionDescription').textContent=s.desc;$('missionReward').textContent='作戦報酬：◆ '+moneyTxt(s.reward)+' CR + 撃破ボーナス';$('sortieButton').disabled=!can}
 function updateUpgrades(){updateTop();const m=ownedFrame();$('upUnitName').textContent=m.jp;$('upgradeGrid').innerHTML=UPGRADES.map(u=>{let lv=saved.mechs[m.id].up[u.id],cost=costOf(m,u.id),mx=lv>=30;return `<div class="upcard"><div class="eyebrow">${u.icon} ${u.name.toUpperCase()}</div><h3>${u.name}</h3><p class="muted small">${u.detail}</p><div class="upmeta"><b>LV ${lv} / 30</b><b class="gold">${mx?'MAX':'◆ '+moneyTxt(cost)}</b></div><div class="bars">${Array.from({length:30},(_,i)=>`<span class="${i<lv?'done':''}"></span>`).join('')}</div><button class="btn ${lv>=20?'goldbtn':''}" ${mx||saved.credits<cost?'disabled':''} data-up="${u.id}">${mx?'改造完了':lv>=20?'限界改造':'強化する'}</button></div>`}).join('')}
 function awardAchievements(){let own=FRAMES.filter(m=>saved.mechs[m.id].owned).length,ups=FRAMES.some(m=>Object.values(saved.mechs[m.id].up).some(lv=>lv>=20));let checks={first:saved.wins>=1,five:saved.totalKills>=50,hunter:saved.bossKills>=10,pilot:(saved.usedFrames||[]).length>=10,engineer:ups,legend:saved.best[STAGES.length-1]>0,rich:saved.earned>=100000,collector:own>=FRAMES.length};for(let [id] of ACHIEVEMENTS)if(checks[id]&&!saved.achievements[id]){saved.achievements[id]=true;saved.credits+=600;notify('実績解除 +600 CR : '+ACHIEVEMENTS.find(a=>a[0]===id)[1]);store()}}
 function updateRecords(){awardAchievements();updateTop();$('recordCards').innerHTML=[['勝利',saved.wins],['撃破数',saved.totalKills],['ボス撃破',saved.bossKills],['敗北',saved.losses],['累計CR',moneyTxt(saved.earned)],['累計ダメージ',moneyTxt(saved.damage)]].map(a=>`<div class="record"><b class="mono">${a[1]}</b><span class="muted small">${a[0]}</span></div>`).join('');$('achievements').innerHTML=ACHIEVEMENTS.map(([id,name,desc])=>`<div class="achieve ${saved.achievements[id]?'done':''}"><b>${saved.achievements[id]?'★':'☆'} ${name}</b><div class="muted small" style="margin-top:6px">${desc}</div></div>`).join('')}
@@ -266,7 +421,7 @@ $('resetSave').onclick=()=>{if(confirm('全機体・強化・戦績・CRを初�
 $('pauseButton').onclick=()=>togglePause();
 function frameForEnemy(e){if(e.boss)return FRAMES[(stageIndex+5)%FRAMES.length];if(e.kind==='ace')return FRAMES[6];if(e.kind==='brute')return FRAMES[5];if(e.kind==='sniper')return FRAMES[2];if(e.kind==='scout')return FRAMES[1];return FRAMES[0]}
 function drawUnit(u,isEnemy=false,t=0){let m=u.frame||FRAMES[0],kind=m.kind;const health=u.hp/u.maxHp,damaged=health<.3;let walking=Math.min(1,Math.hypot(u.vx||0,u.vz||0)/8),speedPhase=(u.anim||t)*8.4,swing=Math.sin(speedPhase)*walking*.43,boosting=!!u.dashing;
-let base=MM(MT(u.x,u.y||0,u.z),MRY(u.rot||0));base=MM(base,MRZ((u.lean||0)*.08));if(false&&ONLINE_ENABLED&&u.model&&u.model.ready&&!u.forceProcedural){drawImported(base,u.model,7*(u.scale||1),.12+Math.sin(t*3)*.04);return}
+let base=MM(MT(u.renderX??u.x,u.y||0,u.renderZ??u.z),MRY((u.renderRot??u.rot??0)));base=MM(base,MRZ((u.lean||0)*.08));if(false&&ONLINE_ENABLED&&u.model&&u.model.ready&&!u.forceProcedural){drawImported(base,u.model,7*(u.scale||1),.12+Math.sin(t*3)*.04);return}
 let sc=(u.scale||1)*(kind==='titan'?1.04:kind==='swift'?.91:kind==='wing'?.96:1);base=MM(base,MS(sc));let bob=(walking?.055*Math.abs(Math.sin(speedPhase)):.015*Math.sin(t*2.1))+(u.jumpHeight||0);base=MM(base,MT(0,bob,0));
 let c1=color(u.tint||m.body),c2=color(u.shadow||m.trim),glow=color(u.glow||m.light),dark='#17232d',joint='#30404b',steel='#879ba9',gold='#d5b886';
 function B(x,y,z,sx,sy,sz,c=c1,em=0,ry=0,rx=0,rz=0){drawMesh(geometry.box,MM(base,locMat(x,y,z,sx,sy,sz,ry,rx,rz)),Array.isArray(c)?c:color(c),em)}
@@ -380,7 +535,239 @@ if(cx==='cannon'||cx==='titan'||cx==='dread'){
 if(cx==='classic'){for(let side of [-1,1]){B(side*.64,5.73,.30,.23,.69,.21,glow,1.4,0,0,-side*.75);B(side*1.03,3.10,.80,.49,.94,.30,c2)}}
 if(damaged&&Math.sin(t*18)>0)G(.23,4.05,.78,.20,[1,.32,.25],2);
 if(boosting){G(-.75,2.4,-.88,.55,glow,2.5);G(.75,2.4,-.88,.55,glow,2.5)}
+drawRefinedUnit(u,base,t,isEnemy);
 }
+/* -----------------------------------------------------------
+   REFORGED STUDIO // hand-built detail pass
+   Every shape below is original procedural geometry.
+------------------------------------------------------------ */
+function makeExtrudedProfile(points){
+ const pos=[],normals=[],uv=[];
+ function tri(a,b,c,n){for(const v of [a,b,c]){pos.push(...v);normals.push(...n);uv.push(v[0]+.5,v[1]+.5)}}
+ for(let i=1;i<points.length-1;i++){
+  tri([...points[0],.5],[...points[i],.5],[...points[i+1],.5],[0,0,1]);
+  tri([...points[i+1],-.5],[...points[i],-.5],[...points[0],-.5],[0,0,-1]);
+ }
+ for(let i=0;i<points.length;i++){
+  let a=points[i],b=points[(i+1)%points.length],nx=b[1]-a[1],ny=-(b[0]-a[0]),m=Math.hypot(nx,ny)||1,n=[nx/m,ny/m,0];
+  let p=[a[0],a[1],.5],q=[b[0],b[1],.5],r=[b[0],b[1],-.5],s=[a[0],a[1],-.5];tri(p,r,q,n);tri(p,s,r,n);
+ }
+ return meshFrom(pos,normals,uv,null)
+}
+if(renderOK){
+ geometry.armor=makeExtrudedProfile([[-.43,-.50],[.43,-.50],[.5,-.29],[.42,.37],[.30,.5],[-.30,.5],[-.42,.37],[-.5,-.29]]);
+ geometry.chevron=makeExtrudedProfile([[-.50,-.5],[.50,-.5],[.28,.5],[0,.22],[-.28,.5]]);
+ geometry.fin=makeExtrudedProfile([[-.35,-.5],[.45,-.5],[.5,-.24],[.09,.5],[-.41,.36]]);
+ geometry.diamond=makeExtrudedProfile([[0,-.5],[.5,0],[0,.5],[-.5,0]]);
+}
+function drawRefinedUnit(u,base,t,isEnemy){
+ if(!renderOK)return;
+ const distanceToPilot=player?Math.hypot((u.x||0)-player.x,(u.z||0)-player.z):0;
+ const main=(u===player||mode==='menu'||u.boss),high=visualPrefs.quality==='cinematic';
+ if(visualPrefs.quality==='battery'&&!main)return;
+ if(!main&&distanceToPilot>(high?38:21))return;
+ const accent=color(u.glow||u.frame?.light||'#d8aa74'),body=color(u.tint||u.frame?.body||'#708f76'),sub=color(u.shadow||u.frame?.trim||'#384b47');
+ const iron=color('#28353c'),metal=color('#78878b'),dark=color('#151f24'),ivory=color('#d4b48b'),n=main?(high?1:0.75):.42;
+ const piece=(geo,x,y,z,sx,sy,sz,c=body,em=0,rz=0,ry=0,rx=0)=>drawMesh(geo,MM(base,locMat(x,y,z,sx,sy,sz,ry,rx,rz)),c,em);
+ const cube=(x,y,z,sx,sy,sz,c=body,em=0,rz=0)=>piece(geometry.box,x,y,z,sx,sy,sz,c,em,rz);
+ const armor=(x,y,z,sx,sy,sz,c=body,rz=0)=>piece(geometry.armor,x,y,z,sx,sy,sz,c,0,rz);
+ const blade=(x,y,z,sx,sy,sz,c=body,rz=0,emit=0)=>piece(geometry.fin,x,y,z,sx,sy,sz,c,emit,rz);
+ // Collar collarbone, facial visor, photoreceptor frame, vented cheeks.
+ armor(0,4.54,.63,.95,.28,.24,sub);
+ armor(0,5.27,.54,.70,.39,.20,iron);
+ cube(0,5.22,.68,.50,.055,.08,accent,2.1);
+ armor(0,4.93,.53,.32,.28,.26,metal);
+ for(let side of [-1,1]){
+  blade(side*.48,5.6,.23,.26,.65,.20,sub,side*-.39);
+  armor(side*.54,5.04,.46,.21,.28,.21,sub,side*.25);
+  // Chest armor is a pair of beveled angled surfaces rather than one box.
+  armor(side*.49,3.99,.79,.93,.70,.33,body,side*.21);
+  armor(side*.63,3.43,.81,.42,.30,.18,sub,side*-.12);
+  cube(side*.56,3.26,.95,.31,.044,.055,accent,1.0);
+  // Breastplate fasteners, shoulder piston housing, independent elbow plates.
+  piece(geometry.cyl,side*.98,4.29,.43,.12,.13,.12,metal);
+  armor(side*1.19,4.31,.30,.85,.60,.43,body,side*.24);
+  piece(geometry.cyl,side*1.18,3.77,.49,.25,.22,.25,metal);
+  armor(side*1.35,3.05,.60,.54,.92,.32,body,side*.13);
+  armor(side*.55,2.08,.50,.70,.87,.30,body,-side*.08);
+  cube(side*.52,1.69,.65,.31,.095,.075,metal);
+  armor(side*.55,1.01,.48,.51,.83,.23,body,side*.05);
+  armor(side*.55,.33,.83,.79,.27,.42,sub);
+  // Patella, inner pivots, ankle protection.
+  piece(geometry.cyl,side*.57,1.41,.56,.19,.18,.19,metal);
+  cube(side*.63,.96,.67,.065,.45,.10,accent,.36);
+  if(main||high){
+   for(let j=0;j<3;j++)cube(side*1.32,3.23+j*.20,.78,.32,.055,.095,iron);
+   for(let j=0;j<3;j++)cube(side*.52,2.20+j*.18,.69,.32,.04,.065,sub);
+   cube(side*.88,4.25,.79,.065,.25,.06,metal);
+   piece(geometry.ball,side*.40,5.16,.73,.095,.09,.09,accent,1.8);
+  }
+ }
+ // Reactor bracing / yellow-black caution details and two-part navel.
+ piece(geometry.chevron,0,3.60,.95,.70,.50,.21,sub);
+ piece(geometry.diamond,0,3.66,1.075,.29,.28,.15,accent,2.3);
+ armor(0,2.58,.45,1.18,.39,.28,sub);
+ for(let side of [-1,1]){
+  // Upper dorsal vent fins and flight-stabilization pylons.
+  armor(side*.73,4.60,-.73,.30,.75,.23,metal,side*.22);
+  if(main){
+   for(let j=0;j<3;j++)cube(side*.78,4.57+j*.17,-.91,.24,.070,.15,iron);
+   piece(geometry.cyl,side*.74,2.82,-1.01,.43,.46,.43,dark);
+   piece(geometry.cyl,side*.74,2.70,-1.04,.24,.33,.24,accent,1.4);
+  }
+ }
+ // Each design family receives a second mechanical detail pass.
+ const kind=u.frame?.kind||'classic';
+ if(['binder','dread','titan','cannon'].includes(kind)){
+  for(let side of [-1,1])for(let rank=0;rank<2;rank++){
+   const x=side*(2.12+rank*.51),y=rank?2.45:4.33,z=-.43-rank*.33;
+   armor(x,y,z,.86,1.62,.26,sub,side*(rank?.27:-.25));
+   armor(x,y+.11,z+.18,.63,1.19,.17,body,side*(rank?.27:-.25));
+   blade(x+side*.14,y+.48,z+.22,.39,.63,.13,metal,side*.27);
+   for(let j=0;j<3;j++)cube(x+side*.19,y-.44+j*.26,z+.30,.19,.043,.055,accent,1.45);
+   piece(geometry.cyl,side*1.79,y-.42,z-.46,.16,.23,.17,metal);
+   if(main)piece(geometry.cyl,x,y-1.03,z-.39,.28,.31,.28,accent,1.7);
+  }
+  armor(0,3.55,1.26,.75,.46,.26,metal);
+  piece(geometry.cyl,0,3.53,1.40,.30,.32,.30,accent,2.9,0,0,Math.PI/2);
+ }
+ if(['wing','flight','feather','funnel','transform'].includes(kind)){
+  for(let side of [-1,1])for(let j=0;j<3;j++){
+   const x=side*(1.65+j*.60),y=4.60+j*.38;
+   blade(x,y,-.65-j*.28,.44,1.46-j*.16,.17,j%2?sub:body,side*(.48+j*.08));
+   cube(x,y-.3,-.41-j*.27,.20,.52,.08,accent,1.2,side*.30);
+  }
+ }
+ if(['samurai','blade','duelist','scythe','dragon','beast'].includes(kind)){
+  for(let side of [-1,1]){
+   blade(side*1.67,2.55,1.1,.24,2.35,.16,metal,side*.19);
+   piece(geometry.diamond,side*1.76,4.0,1.20,.40,.36,.15,accent,2.1);
+   blade(side*.98,5.59,-.20,.32,.74,.22,sub,side*.6);
+  }
+ }
+ if(['halo','astral'].includes(kind))for(let i=0;i<12;i++){
+  let theta=i/12*Math.PI*2+t*.25;
+  const x=Math.cos(theta)*2.55,y=3.6+Math.sin(theta)*2.4;
+  piece(geometry.diamond,x,y,-1.30,.19,.31,.12,i%3?metal:accent,i%3?0:2.3,theta);
+ }
+ // Damage / propulsion status is reflected in geometry as well as the HUD.
+ const h=(u.hp??1)/Math.max(1,u.maxHp??1);
+ if(h<.55&&(main||high)){
+  const pulse=.65+Math.sin(t*7)*.35;
+  cube(.74,3.95,.96,.31,.10,.12,color('#e85f4b'),pulse*1.45,.6);
+ }
+ if(u.guarding&&main){
+  for(let i=0;i<12;i++){
+   const a=i/12*Math.PI*2+t*.6;
+   piece(geometry.diamond,Math.sin(a)*2.9,3.2+Math.cos(a)*2.7,Math.cos(a)*.28,.11,.16,.08,accent,1.5,a);
+  }
+ }
+ if((u.dashTime>0||u.jumpHeight>1.0)&&main){
+  for(let side of [-1,1]){
+   piece(geometry.cone,side*.78,2.24,-1.37,.58,2.1,.57,accent,1.9,0,0,Math.PI);
+   piece(geometry.cyl,side*.78,2.15,-.95,.40,.34,.4,metal);
+  }
+ }
+}
+
+// Environmental structures have consistent material grammar but distinct silhouettes.
+function drawArenaAccents(s,t){
+ if(!renderOK)return;
+ const b=M4(),theme=s.theme,glow=idxGlow(theme),half=48;
+ const n=visualPrefs.quality==='battery'?2:visualPrefs.quality==='balanced'?4:6;
+ for(let side of [-1,1])for(let i=0;i<n;i++){
+  const z=(i-(n-1)/2)*24-3;
+  const x=side*(41+(i%2)*11);
+  if(theme===2||theme===13||theme===14){
+   // Stacked industrial city: truss bridges, signal gantries, warning lamps.
+   block(b,x,17,z,2.2,34,2.5,'#273e43');
+   block(b,x-side*5.1,19,z,9.2,.62,.66,'#647b7b');
+   block(b,x-side*10,23,z,.5,9,.55,'#536d72');
+   block(b,x-side*3,21,z+.44,4.6,.29,.09,glow,1.6);
+   for(let j=0;j<4;j++)block(b,x-side*3,12+j*2.7,z+1.3,3.6,.11,.12,'#94a9a9',.16);
+  }else if(theme===1||theme===7||theme===12){
+   // Staggered cliff/temple spires with bevel cut stone.
+   block(b,x,8,z,4,16,3.8,theme===1?'#76634f':'#4d4447');
+   drawMesh(geometry.fin,locMat(x,19,z,5,11,3),color(theme===1?'#bc9568':'#95847b'));
+   block(b,x,8,z+1.95,2.3,3,.13,glow,.72);
+  }else if(theme===5||theme===11||theme===15||theme===6){
+   // Shipyard scaffolds and radio dishes against the orbital skyline.
+   block(b,x,8,z,1.3,15,1.3,'#53626c');
+   for(let k=0;k<3;k++){let y=5+k*4;block(b,x,y,z,5,.19,.21,'#84939e');block(b,x,y,z+1.2,5,.14,.15,'#748592')}
+   drawMesh(geometry.cyl,locMat(x,17,z,5,.26,5),color('#b8b0a3'));
+   ball(b,x,18,z,1.2,1.2,1.2,glow,1.4);
+  }else if(theme===8||theme===10){
+   // Coastal pressure tanks, pipe braces and boom cranes.
+   cyl(b,x,8,z,3,16,3,'#526e70');
+   cyl(b,x,17,z,3.3,.9,3.3,'#b5a994');
+   block(b,x-side*5,15,z,10,.29,.32,'#9aa5a0');
+   block(b,x-side*9,9,z,.4,12,.4,'#819c9f');
+   ball(b,x,17.7,z,1.1,.5,1.1,glow,.8);
+  }else if(theme===9){
+   // Ancient overgrowth, giant exposed roots and branches.
+   cyl(b,x,10,z,3.0,21,2.9,'#3e4b3b');
+   for(let j=0;j<4;j++){const a=j*1.6;
+    rod([x,13,z],[x+Math.sin(a)*8,16+j*1.4,z+Math.cos(a)*8],.5,'#43563f');
+    ball(b,x+Math.sin(a)*8,17+j*1.4,z+Math.cos(a)*8,5,2.2,4,'#3a6149');
+   }
+  }else if(theme===3){
+   block(b,x,5,z,5,10,5,'#667f87');
+   drawMesh(geometry.fin,locMat(x,16,z,6,14,5,0,0,side*.22),color('#d0e7e7'),.35);
+   block(b,x,1,z+2.6,3,.15,.14,glow,1.2);
+  }else if(theme===4){
+   // Foundry chimney & cooling pipes.
+   cyl(b,x,12,z,3.3,24,3.3,'#4a3c39');
+   cyl(b,x,24.2,z,3.75,2.3,3.75,'#8f7567');
+   ball(b,x,26,z,1.9,1,1.9,glow,2.2);
+   rod([x,5,z],[x-side*8,3,z+9],.42,'#74635a');
+  }else{
+   // Debris and broken defensive walls, irregular but deterministic.
+   block(b,x,4,z,5.5,8,3,'#56625d');
+   drawMesh(geometry.fin,locMat(x,11,z,4.4,9,3.2,0,0,side*.22),color('#7a8075'));
+   block(b,x,6,z+1.62,3.2,.2,.19,glow,1.2);
+  }
+ }
+ if(theme===5||theme===6||theme===11||theme===15){
+  // Far planet / atmosphere terminator, far enough behind combat zone.
+  ball(b,93,72,105,30,30,30,theme===6?'#5e4d77':'#496c84');
+  ball(b,82,80,102,13,13,13,theme===6?'#a076ad':'#9dbbc2',.15);
+ }
+ if(theme===14){
+  // Aircraft runway marking & approach beams.
+  for(let k=-4;k<=4;k++)block(b,k*7,.045,0,.7,.035,110,'#c3c2aa',.15);
+  for(let k=-5;k<=5;k++)ball(b,k*6,.4,40,.27,.20,.27,'#e7ad80',2);
+ }
+ if(theme===7){for(let i=-3;i<=3;i++){block(b,i*8,7,57,1.6,14,2.4,'#654f5d');ball(b,i*8,14.4,57,.65,.68,.65,'#e59185',1.5)}}
+}
+
+/* Physical presentation overlay: weather, motes, heat haze and combat feedback. */
+const atmosphereCanvas=$('atmosphere');const atmosphereCtx=atmosphereCanvas?.getContext('2d');
+let weatherParticles=[],weatherTheme=-100,hitPulse=0,shakePower=0,comboCount=0,comboAge=0,comboDamage=0;
+function resetWeather(theme){weatherTheme=theme;weatherParticles=[];for(let i=0;i<220;i++)weatherParticles.push({x:Math.random(),y:Math.random(),z:.2+Math.random()*.9,v:.25+Math.random()*.7,s:.3+Math.random()*.9})}
+function drawWeather(dt,t){
+ if(!atmosphereCtx||!visualPrefs.weather)return;
+ const w=innerWidth,h=innerHeight,dpr=Math.min(devicePixelRatio||1,1.5);if(atmosphereCanvas.width!==Math.floor(w*dpr)||atmosphereCanvas.height!==Math.floor(h*dpr)){
+  atmosphereCanvas.width=Math.floor(w*dpr);atmosphereCanvas.height=Math.floor(h*dpr);atmosphereCanvas.style.width=w+'px';atmosphereCanvas.style.height=h+'px';
+ }
+ const c=atmosphereCtx;c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,w,h);
+ if(mode==='menu')return;
+ const theme=STAGES[stageIndex]?.theme??0;if(weatherTheme!==theme)resetWeather(theme);
+ const count=visualPrefs.quality==='cinematic'?150:visualPrefs.quality==='balanced'?95:38;
+ const rain=[0,2,10,14].includes(theme),snow=[3,11].includes(theme),dust=[1,7,12].includes(theme),embers=theme===4;
+ for(let i=0;i<count;i++){
+  const p=weatherParticles[i];p.x+=(rain?-.17:snow?.015:dust?.044:.025)*p.v*dt;
+  p.y+=(rain?1.8:snow?.09:dust?.06:embers?-.16:.045)*p.v*dt;
+  if(p.y>1.1||p.y<-.1||p.x<-.15||p.x>1.15){p.x=Math.random();p.y=embers?1.02:-.05}
+  const x=p.x*w,y=p.y*h;
+  c.beginPath();
+  if(rain){c.strokeStyle='rgba(202,222,219,0.29)';c.lineWidth=.85*p.s;c.moveTo(x,y);c.lineTo(x-3*p.z,y+13*p.z);c.stroke()}
+  else if(snow){c.fillStyle='rgba(221,235,235,0.45)';c.arc(x,y,1.2*p.z+1,0,6.28);c.fill()}
+  else{c.fillStyle=embers?'rgba(255,143,84,.50)':dust?'rgba(215,180,139,.22)':'rgba(152,225,210,.18)';c.arc(x,y,(embers?1.4:1.8)*p.s,0,6.28);c.fill()}
+ }
+ if(hitPulse>0){hitPulse=Math.max(0,hitPulse-dt*2.2);c.fillStyle=`rgba(154,35,24,${hitPulse*.14})`;c.fillRect(0,0,w,h)}
+}
+function flashHit(amount=1){if(!visualPrefs.shake)return;hitPulse=Math.min(1,hitPulse+amount*.42);shakePower=Math.min(9,shakePower+amount*4)}
+
 function createArena(idx){const s=STAGES[idx],rand=seeded(22000+idx*1937);sceneTheme=STAGES[idx].theme;obstacles=[];props=[];stars=[];
 for(let i=0;i<64;i++){let x=(rand()-.5)*154,z=(rand()-.5)*154;if(Math.hypot(x,z)<16)continue;let size=1.8+rand()*4.6,type=Math.floor(rand()*5),h=size*(.7+rand()*3.3);if(sceneTheme===2&&rand()<.5)h=9+rand()*24;if(sceneTheme===5)h=2+rand()*8;let obj={x,z,size,h,type,rot:rand()*6.28,shade:rand()};props.push(obj);if(Math.abs(x)<68&&Math.abs(z)<68&&size>3.9)obstacles.push(obj)}
 for(let i=0;i<120;i++)stars.push([rand()*2-1,rand()*2-1,rand()]);
@@ -410,6 +797,7 @@ else{block(b,0,h*.30,0,sc,h*.62,sc*.9,o.shade>.5?'#455662':'#31424f');block(b,0,
 }
 // Distant stylized skyline on the fog horizon.
 for(let i=0;i<18;i++){let a=i/18*Math.PI*2,rad=113,x=Math.sin(a)*rad,z=Math.cos(a)*rad,h=(sceneTheme===2?28:14)+Math.sin(i*12)*5;block(base,x,h/2-.3,z,9,h,9,s.soil)}
+drawArenaAccents(s,t);
 }
 function idxGlow(i){return ['#b3c5b3','#f6bb76','#8cdef5','#e1f2ff','#ff8b50','#5ed5e9','#d689ee','#ff668a','#9af0df','#b3e898','#89c9ff','#eee8bd','#eac9aa','#8deaca','#91b9fe','#a4a9d8'][i]||'#5ed5e9'}
 function drawHangar(t){let b=M4();block(b,0,-.64,0,150,1,150,'#172c3c');for(let i=-46;i<=46;i+=7){block(b,i,-.1,0,.055,.02,85,'#285873',.3);block(b,0,-.1,i,85,.02,.055,'#285873',.3)}
@@ -423,7 +811,7 @@ function makePlayer(){const frame=ownedFrame(),s=unitStats(frame);return{id:0,fr
 function enemyOf(kind,x,z,boss=false){let level=stageIndex,diff=1+level*.23+Math.max(0,wave-1)*.18,m=FRAMES[(level+(kind==='scout'?1:kind==='ace'?6:kind==='brute'?5:kind==='sniper'?2:0))%FRAMES.length];if(boss)m=FRAMES[(level+5)%FRAMES.length];let hp=(boss?2350:kind==='brute'?720:kind==='ace'?620:kind==='sniper'?350:kind==='scout'?260:410)*diff,att=(boss?70:kind==='brute'?47:kind==='sniper'?53:kind==='ace'?43:29)*(1+level*.12);return {id:nextId++,frame:m,kind,boss,name:boss?STAGES[stageIndex].boss:kind==='brute'?'HEAVY GUARD':kind==='sniper'?'LONG RANGER':kind==='ace'?'ACE FRAME':kind==='scout'?'STRIKER':'HOSTILE FRAME',x,z,y:0,vx:0,vz:0,rot:0,scale:boss?1.67:kind==='brute'?1.12:.86,atk:att,def:boss?24:kind==='brute'?14:8,maxHp:hp,hp,fireCd:Math.random()*2+1,slashCd:0,dashCd:0,aiStrafe:Math.random()>.5?1:-1,aiChange:1+Math.random()*3,anim:Math.random()*8,tint:boss?STAGES[stageIndex].bossColor:kind==='brute'?'#b18e78':kind==='ace'?'#ce6ad7':kind==='sniper'?'#779eb8':'#9b6970',shadow:boss?'#4a283c':kind==='scout'?'#392534':'#37414b',glow:boss?'#ff738e':'#ff8985',dead:false,forceProcedural:true}}
 function freeSpawn(rad=33){const a=Math.random()*6.283,d=rad+Math.random()*29;return [Math.sin(a)*d,Math.cos(a)*d]}
 function spawnWave(){if(net.inMatch&&(net.mode==='versus'||!net.isHost))return;let qty=clamp(2+Math.floor(wave*.7)+Math.floor(stageIndex*.13),3,7);enemies.length=0;lockedId=0;let types=STAGES[stageIndex].enemies;if(wave===4)qty=Math.min(5,3+Math.floor(stageIndex/3));for(let i=0;i<qty;i++){let [x,z]=freeSpawn(),kind=types[Math.floor(Math.random()*types.length)];enemies.push(enemyOf(kind,x,z))}if(wave===4){let [x,z]=freeSpawn(46);enemies.push(enemyOf('boss',x,z,true));notify('警告 : 強大なボス反応を検出',true);sound('special')}else notify('WAVE '+wave+' / 4 — 敵 '+qty+' 機接近');waveCool=-1;updateHUD()}
-function startBattle(){let can=true;if(!can)return;initAudio();mode='battle';$('menu').classList.add('hidden');$('battleHUD').classList.remove('hidden');$('modalWrap').classList.add('hidden');$('toasts').innerHTML='';sceneTheme=STAGES[stageIndex].theme;createArena(stageIndex);player=makePlayer();if(!saved.usedFrames.includes(player.frame.id))saved.usedFrames.push(player.frame.id);store();projectiles=[];particles=[];enemies=[];battleTime=0;kills=0;sessionReward=0;wave=1;waveCool=0;camYaw=0;camPitch=.37;cameraPos=[0,9,-17];mouseShoot=false;stick.x=stick.y=0;Object.keys(touchKeys).forEach(k=>touchKeys[k]=false);spawnWave();$('hudMission').textContent=STAGES[stageIndex].name;$('networkHud').textContent=net.inMatch?(net.mode==='coop'?'CO-OP':'VERSUS')+' / '+net.room:'SOLO / '+pilotName;$('quitOnline').classList.toggle('hidden',!net.inMatch);$('pauseButton').classList.toggle('hidden',net.inMatch);updateWeaponHUD();updateHUD();}
+function startBattle(){let can=true;if(!can)return;initAudio();mode='battle';$('menu').classList.add('hidden');$('battleHUD').classList.remove('hidden');$('modalWrap').classList.add('hidden');$('toasts').innerHTML='';sceneTheme=STAGES[stageIndex].theme;createArena(stageIndex);resetWeather(sceneTheme);comboCount=0;comboAge=0;hitPulse=0;player=makePlayer();if(!saved.usedFrames.includes(player.frame.id))saved.usedFrames.push(player.frame.id);store();projectiles=[];particles=[];enemies=[];battleTime=0;kills=0;sessionReward=0;wave=1;waveCool=0;camYaw=0;camPitch=.37;cameraPos=[0,9,-17];mouseShoot=false;stick.x=stick.y=0;Object.keys(touchKeys).forEach(k=>touchKeys[k]=false);spawnWave();$('hudMission').textContent=STAGES[stageIndex].name;$('networkHud').textContent=net.inMatch?(net.mode==='coop'?'CO-OP':'VERSUS')+' / '+net.room:'SOLO / '+pilotName;$('quitOnline').classList.toggle('hidden',!net.inMatch);$('pauseButton').classList.toggle('hidden',net.inMatch);updateWeaponHUD();$('battlePlace').textContent='FIELD '+String(stageIndex+1).padStart(2,'0')+' / '+STAGES[stageIndex].subtitle+' / '+(STAGES[stageIndex].theme===3?'ICY GROUND':STAGES[stageIndex].theme===1?'SAND DRIFT':'ALL TERRAIN');updateHUD();}
 function endBattle(success){if(mode!=='battle')return;if(net.inMatch&&net.mode==='coop'&&net.isHost)netSend({type:'finish',success:!!success});net.inMatch=false;mode='result';saved.wins+=success?1:0;saved.losses+=success?0:1;if(success){saved.best[stageIndex]=Math.max(saved.best[stageIndex],3);sessionReward+=STAGES[stageIndex].reward+Math.round(player.hp/player.maxHp*STAGES[stageIndex].reward*.35);saved.xp+=150*(stageIndex+1)}else{sessionReward+=Math.round(STAGES[stageIndex].reward*.06);saved.xp+=40*(stageIndex+1)}saved.credits+=sessionReward;saved.earned+=sessionReward;store();awardAchievements();$('battleHUD').classList.add('hidden');$('modalWrap').classList.remove('hidden');let openNext=success&&stageIndex<STAGES.length-1;let nextButton=openNext&&!net.room?'<button class="btn goldbtn wide" id="resultNext">次の作戦へ進む</button>':'';$('modalContent').innerHTML=`<div class="eyebrow">MISSION REPORT / OP 0${stageIndex+1}</div><h2 style="color:${success?'#93f8dc':'#ff8993'}">${success?'MISSION COMPLETE':'MISSION FAILED'}</h2><p>${success?'作戦成功。敵部隊を完全に制圧しました。':'機体が大破しました。獲得した撃破報酬は保持されます。'}</p><div class="resultline"><span>撃破数</span><b>${kills} 機</b></div><div class="resultline"><span>戦闘時間</span><b>${Math.floor(battleTime/60)}:${String(Math.floor(battleTime%60)).padStart(2,'0')}</b></div><div class="resultline"><span>獲得報酬</span><b style="color:#ffdc83">◆ +${moneyTxt(sessionReward)} CR</b></div>${nextButton}<button class="btn wide ${net.room?'hidden':''}" id="resultRetry">この作戦に再出撃</button><button class="btn alt wide" id="resultMenu">格納庫へ戻る</button>`;
 if(openNext&&!net.room)$('resultNext').onclick=()=>{stageIndex++;startBattle()};$('resultRetry').onclick=()=>startBattle();$('resultMenu').onclick=()=>returnMenu(net.room?'multiplayer':'garage')}
 function returnMenu(tab){mode='menu';player=null;enemies=[];projectiles=[];particles=[];$('modalWrap').classList.add('hidden');$('battleHUD').classList.add('hidden');$('menu').classList.remove('hidden');mouseShoot=false;activeFrame=saved.selected;showTab(tab);}
@@ -447,13 +835,13 @@ function special(){if(mode!=='battle'||player.specialCd>0||player.energy<Math.mi
 function recharge(dt){player.energy=clamp(player.energy+dt*(player.guarding?0:11+unitStats(player.frame).boost*.038),0,player.maxEnergy);player.shield=clamp(player.shield+dt*(player.guarding?0:5.1),0,100)}
 function getAxes(){let x=(keys.KeyD||touchKeys.right?1:0)-(keys.KeyA||touchKeys.left?1:0)+stick.x;let z=(keys.KeyW||touchKeys.up?1:0)-(keys.KeyS||touchKeys.down?1:0)-stick.y;let d=Math.hypot(x,z);if(d>1){x/=d;z/=d}return[x,z]}
 function avoidWalls(o,rad=2){o.x=clamp(o.x,-75+rad,75-rad);o.z=clamp(o.z,-75+rad,75-rad);for(let ob of obstacles){let r=Math.max(1.4,ob.size*.46)+rad,dx=o.x-ob.x,dz=o.z-ob.z,d=Math.hypot(dx,dz);if(d>0.01&&d<r){o.x+=dx/d*(r-d);o.z+=dz/d*(r-d)}}}
-function updatePlayer(dt){if(!player)return;let [ix,iz]=getAxes(),forw=[Math.sin(camYaw),Math.cos(camYaw)],right=[Math.cos(camYaw),-Math.sin(camYaw)];let dx=forw[0]*iz+right[0]*ix,dz=forw[1]*iz+right[1]*ix;const moving=Math.hypot(dx,dz)>.08;let sp=player.spd*(player.dashTime>0?2.75:.55);player.vx=lerp(player.vx,dx*sp,clamp(dt*(player.dashTime>0?15:10),0,1));player.vz=lerp(player.vz,dz*sp,clamp(dt*(player.dashTime>0?15:10),0,1));player.x+=player.vx*dt;player.z+=player.vz*dt;if(moving&&!(mouseShoot||keys.KeyJ||touchKeys.shoot)){let targetRot=Math.atan2(dx,dz),del=Math.atan2(Math.sin(targetRot-player.rot),Math.cos(targetRot-player.rot));player.rot+=clamp(del,-dt*6,dt*6)}avoidWalls(player,1.3);
+function updatePlayer(dt){if(!player)return;let [ix,iz]=getAxes(),forw=[Math.sin(camYaw),Math.cos(camYaw)],right=[Math.cos(camYaw),-Math.sin(camYaw)];let dx=forw[0]*iz+right[0]*ix,dz=forw[1]*iz+right[1]*ix;const moving=Math.hypot(dx,dz)>.08;let sp=player.spd*(player.dashTime>0?2.75:.55);let traction=sceneTheme===3?.57:sceneTheme===1?.79:sceneTheme===8?.71:1;player.vx=lerp(player.vx,dx*sp,clamp(dt*(player.dashTime>0?15:10)*traction,0,1));player.vz=lerp(player.vz,dz*sp,clamp(dt*(player.dashTime>0?15:10)*traction,0,1));player.x+=player.vx*dt;player.z+=player.vz*dt;if(moving&&!(mouseShoot||keys.KeyJ||touchKeys.shoot)){let targetRot=Math.atan2(dx,dz),del=Math.atan2(Math.sin(targetRot-player.rot),Math.cos(targetRot-player.rot));player.rot+=clamp(del,-dt*6,dt*6)}avoidWalls(player,1.3);
 if(player.dashTime>0){player.dashTime-=dt;addParticles([player.x,.7,player.z],player.frame.light,2,1,.23)}player.jumpHeight=Math.max(0,player.jumpHeight+player.jumpVel*dt);player.jumpVel-=dt*33;if(player.jumpHeight===0)player.jumpVel=0;player.anim+=dt*(moving?2:1);
 player.guarding=(keys.KeyE||touchKeys.shield)&&player.energy>0&&player.shield>0;if(player.guarding)player.energy=Math.max(0,player.energy-dt*17);else recharge(dt);if(player.guarding)player.shield=clamp(player.shield-dt*2,0,100);
 for(let k of ['fireCd','dashCd','slashCd','specialCd','invuln','slashEffect'])player[k]=Math.max(0,(player[k]||0)-dt);
 if(mouseShoot||keys.KeyJ||touchKeys.shoot)shoot(player,player.weapon);if(keys.KeyK||touchKeys.slash)slashAttack(player);if(keys.KeyL||touchKeys.special)special();if(keys.ShiftLeft||keys.ShiftRight||touchKeys.dash)dash();if(keys.Space||touchKeys.jump)jump();
 }
-function updateEnemies(dt){for(let e of enemies){if(e.hp<=0)continue;for(let k of ['fireCd','slashCd','dashCd','slashEffect'])e[k]=Math.max(0,(e[k]||0)-dt);let victim=closestCoopPilot(e),dx=victim.x-e.x,dz=victim.z-e.z,dist=Math.hypot(dx,dz)||1,ux=dx/dist,uz=dz/dist;let ideal=e.kind==='sniper'?33:e.boss?20:e.kind==='ace'?16:21;let pursuit=dist>ideal+4?1:dist<ideal-6?-.75:0;let side=e.aiStrafe;let sp=(e.boss?8:e.kind==='ace'?15:e.kind==='scout'?14:e.kind==='brute'?7:10)*(1+stageIndex*.045),vx=(ux*pursuit-uz*side*.51)*sp,vz=(uz*pursuit+ux*side*.51)*sp;e.vx=lerp(e.vx,vx,dt*2);e.vz=lerp(e.vz,vz,dt*2);e.x+=e.vx*dt;e.z+=e.vz*dt;avoidWalls(e,e.boss?2.6:1.4);e.rot=Math.atan2(ux,uz);e.anim+=dt*(dist>ideal?3:1);e.aiChange-=dt;if(e.aiChange<=0){e.aiStrafe*=-1;e.aiChange=2+Math.random()*4}if(dist<(e.boss?7:4.8)&&e.slashCd<=0&&Math.random()<.028)slashAttack(e);if(dist<73&&e.fireCd<=0)shoot(e);if(e.boss&&e.hp/e.maxHp<.5&&Math.random()<dt*.2){for(let k=0;k<5;k++){let angle=k/5*6.283;projectiles.push({id:nextId++,friendly:false,x:e.x,y:3,z:e.z,px:e.x,py:3,pz:e.z,vx:Math.sin(angle)*26,vy:0,vz:Math.cos(angle)*26,damage:e.atk*.6,r:.35,ttl:2,col:'#ff7089',explosive:false})}addParticles([e.x,4,e.z],e.glow,8,10,.5)}}}
+function updateEnemies(dt){for(let e of enemies){if(e.hp<=0)continue;for(let k of ['fireCd','slashCd','dashCd','slashEffect'])e[k]=Math.max(0,(e[k]||0)-dt);let victim=closestCoopPilot(e),dx=victim.x-e.x,dz=victim.z-e.z,dist=Math.hypot(dx,dz)||1,ux=dx/dist,uz=dz/dist;let ideal=e.kind==='sniper'?33:e.boss?(e.hp/e.maxHp<.45?15:20):e.kind==='ace'?16:21;let pursuit=dist>ideal+4?1:dist<ideal-6?-.75:0;let side=e.aiStrafe;let sp=(e.boss?(e.hp/e.maxHp<.45?12:8):e.kind==='ace'?15:e.kind==='scout'?14:e.kind==='brute'?7:10)*(1+stageIndex*.045),vx=(ux*pursuit-uz*side*.51)*sp,vz=(uz*pursuit+ux*side*.51)*sp;e.vx=lerp(e.vx,vx,dt*2);e.vz=lerp(e.vz,vz,dt*2);e.x+=e.vx*dt;e.z+=e.vz*dt;avoidWalls(e,e.boss?2.6:1.4);e.rot=Math.atan2(ux,uz);e.anim+=dt*(dist>ideal?3:1);e.aiChange-=dt;if(e.aiChange<=0){e.aiStrafe*=-1;e.aiChange=2+Math.random()*4}if(dist<(e.boss?7:4.8)&&e.slashCd<=0&&Math.random()<.028)slashAttack(e);if(dist<73&&e.fireCd<=0)shoot(e);if(e.boss&&e.hp/e.maxHp<.5&&Math.random()<dt*.2){for(let k=0;k<5;k++){let angle=k/5*6.283;projectiles.push({id:nextId++,friendly:false,x:e.x,y:3,z:e.z,px:e.x,py:3,pz:e.z,vx:Math.sin(angle)*26,vy:0,vz:Math.cos(angle)*26,damage:e.atk*.6,r:.35,ttl:2,col:'#ff7089',explosive:false})}addParticles([e.x,4,e.z],e.glow,8,10,.5)}}}
 function updateProjectiles(dt){for(let i=projectiles.length-1;i>=0;i--){let p=projectiles[i];p.ttl-=dt;p.px=p.x;p.py=p.y;p.pz=p.z;p.x+=p.vx*dt;p.y+=p.vy*dt;p.z+=p.vz*dt;let hit=null;if(p.friendly){for(let e of enemies){if(e.hp<=0)continue;if(Math.hypot(p.x-e.x,p.z-e.z)<(e.boss?2.8:1.65)+p.r&&Math.abs(p.y-(e.boss?4.0:2.7))<3.6){hit=e;break}}}else{let victim=p.targetId&&net.inMatch?net.remote.get(p.targetId):player;if(victim&&Math.hypot(p.x-victim.x,p.z-victim.z)<1.8+p.r&&Math.abs(p.y-((victim.jumpHeight||0)+2.7))<3.5)hit=victim}
 if(hit){if(p.friendly){damageEnemy(hit,p.damage);if(p.explosive)for(let e of enemies)if(e!==hit&&e.hp>0&&Math.hypot(e.x-hit.x,e.z-hit.z)<5)damageEnemy(e,p.damage*.35)}else if(hit.netId&&net.inMatch&&net.isHost)netSend({type:'hurt',targetId:hit.netId,amount:p.damage});else damagePlayer(p.damage);addParticles([p.x,p.y,p.z],p.col,p.explosive?26:6,p.explosive?10:4,.35)}if(hit||p.ttl<=0||Math.abs(p.x)>81||Math.abs(p.z)>81||p.y<0){projectiles.splice(i,1)}}}
 function updateParticles(dt){for(let i=particles.length-1;i>=0;i--){let p=particles[i];p.life-=dt;if(p.life<=0){particles.splice(i,1);continue}p.x+=p.vx*dt;p.y+=p.vy*dt;p.z+=p.vz*dt;p.vx*=.96;p.vz*=.96;p.vy-=dt*5}}
@@ -464,7 +852,7 @@ document.querySelectorAll('.wepslot').forEach(slot=>{slot.style.pointerEvents='a
  const pick=()=>{if(mode==='battle'&&player){player.weapon=Number(slot.dataset.weapon);updateWeaponHUD()}};
  slot.addEventListener('pointerdown',e=>{e.preventDefault();pick()});slot.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick()}})});
 
-function updateHUD(){if(!player)return;$('hudFrame').textContent='PILOT '+pilotName+' / '+player.frame.en;$('hpText').textContent=Math.ceil(player.hp)+' / '+player.maxHp;$('hpFill').style.width=(100*player.hp/player.maxHp)+'%';$('shieldText').textContent=Math.ceil(player.shield)+'%';$('shieldFill').style.width=player.shield+'%';$('energyText').textContent=Math.ceil(player.energy/player.maxEnergy*100)+'%';$('energyFill').style.width=(player.energy/player.maxEnergy*100)+'%';$('hudWave').textContent=net.inMatch&&net.mode==='versus'?'LAST UNIT STANDING • '+(enemies.filter(e=>e.hp>0).length+Number(player.hp>0))+' 生存':'WAVE '+wave+' / 4';$('hudKills').textContent='KILLS '+kills;$('hudScore').textContent='◆ +'+moneyTxt(sessionReward)+' CR • '+Math.floor(battleTime/60)+':'+String(Math.floor(battleTime%60)).padStart(2,'0');let target=lockedEnemy(),boss=enemies.find(e=>e.boss&&e.hp>0);$('targetHUD').classList.toggle('hidden',!target);if(target){$('targetName').textContent=target.name;$('targetFill').style.width=100*Math.max(0,target.hp/target.maxHp)+'%'}$('bossbar').classList.toggle('hidden',!boss);if(boss){$('bossName').textContent=boss.name;$('bossHP').textContent=Math.max(0,Math.ceil(boss.hp))+' / '+Math.ceil(boss.maxHp);$('bossFill').style.width=(100*boss.hp/boss.maxHp)+'%'}drawRadar()}
+function updateHUD(){if(!player)return;$('hudFrame').textContent='PILOT '+pilotName+' / '+player.frame.en;$('hpText').textContent=Math.ceil(player.hp)+' / '+player.maxHp;$('hpFill').style.width=(100*player.hp/player.maxHp)+'%';$('shieldText').textContent=Math.ceil(player.shield)+'%';$('shieldFill').style.width=player.shield+'%';$('energyText').textContent=Math.ceil(player.energy/player.maxEnergy*100)+'%';$('energyFill').style.width=(player.energy/player.maxEnergy*100)+'%';$('hudWave').textContent=net.inMatch&&net.mode==='versus'?'LAST UNIT STANDING • '+(enemies.filter(e=>e.hp>0).length+Number(player.hp>0))+' 生存':'WAVE '+wave+' / 4';$('hudKills').textContent='KILLS '+kills;$('hudScore').textContent='◆ +'+moneyTxt(sessionReward)+' CR • '+Math.floor(battleTime/60)+':'+String(Math.floor(battleTime%60)).padStart(2,'0');let target=lockedEnemy(),boss=enemies.find(e=>e.boss&&e.hp>0);$('targetHUD').classList.toggle('hidden',!target);if(target){$('targetName').textContent=target.name;$('targetFill').style.width=100*Math.max(0,target.hp/target.maxHp)+'%'}$('bossbar').classList.toggle('hidden',!boss);if(boss){$('bossName').textContent=boss.name;$('bossHP').textContent=Math.max(0,Math.ceil(boss.hp))+' / '+Math.ceil(boss.maxHp);$('bossFill').style.width=(100*boss.hp/boss.maxHp)+'%'}if($('specialFill'))$('specialFill').style.width=(player.specialCd>0?100*(1-player.specialCd/14):100)+'%';if($('lockReticle'))$('lockReticle').classList.toggle('locking',!!target);drawRadar()}
 function drawRadar(){let c=$('radar'),ctx=c.getContext('2d');ctx.clearRect(0,0,c.width,c.height);ctx.strokeStyle='#275f7188';ctx.lineWidth=1;for(let rad of [15,28,41]){ctx.beginPath();ctx.arc(75,45,rad,0,6.283);ctx.stroke()}ctx.beginPath();ctx.moveTo(75,0);ctx.lineTo(75,90);ctx.moveTo(0,45);ctx.lineTo(150,45);ctx.stroke();for(let e of enemies){if(e.hp<=0)continue;let x=75+(e.x-player.x)*.7,z=45-(e.z-player.z)*.7;ctx.fillStyle=e.boss?'#ffe4a3':'#ff6d85';ctx.fillRect(clamp(x,2,145)-2,clamp(z,2,85)-2,e.boss?6:4,e.boss?6:4)}ctx.fillStyle='#aaf4ff';ctx.beginPath();ctx.arc(75,45,3.5,0,6.283);ctx.fill()}
 // Optional, real CC0 .glb files. Native glTF 2.0 reader; no third-party JS library.
 // CC0 asset provenance: https://github.com/RamonLinares/atlas-09/blob/main/ASSET-LICENSE.md
@@ -490,7 +878,7 @@ async function requestOnlineModel(id){if(!ONLINE_ENABLED||!renderOK||MODEL_CACHE
 $('useOnline').addEventListener('change',e=>{ONLINE_ENABLED=e.target.checked;if(ONLINE_ENABLED){if(MODEL_CACHE[activeFrame]?.failed)delete MODEL_CACHE[activeFrame];requestOnlineModel(activeFrame)}showSourceStatus(activeFrame)});
 function smoothAngle(a,b,t){return a+Math.atan2(Math.sin(b-a),Math.cos(b-a))*clamp(t,0,1)}
 function renderScene(dt,t){if(fallback2d){renderFallback2D(dt,t);return}if(!renderOK)return;resize();const battle=mode==='battle'||mode==='paused'||mode==='result',s=STAGES[stageIndex],day=battle?s.sky:'#132e47',clr=color(day);gl.clearColor(...rgb(clr,battle?.62:.48),1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);drawCalls=0;
-if(battle&&player){if(mode==='battle'&&!dragging)camYaw=smoothAngle(camYaw,player.rot,dt*.18);const eyeTarget=[player.x-Math.sin(camYaw)*16,8.3+camPitch*6+player.jumpHeight*.4,player.z-Math.cos(camYaw)*16],look=[player.x+Math.sin(camYaw)*3,3.1+player.jumpHeight*.45,player.z+Math.cos(camYaw)*3];cameraPos=mixvec(cameraPos,eyeTarget,Math.min(1,dt*7));setupCam(cameraPos,look,s.fog);drawStage(s,t);
+if(battle&&player){if(mode==='battle'&&!dragging)camYaw=smoothAngle(camYaw,player.rot,dt*.18);const eyeTarget=[player.x-Math.sin(camYaw)*16,8.3+camPitch*6+player.jumpHeight*.4,player.z-Math.cos(camYaw)*16],look=[player.x+Math.sin(camYaw)*3,3.1+player.jumpHeight*.45,player.z+Math.cos(camYaw)*3];cameraPos=mixvec(cameraPos,eyeTarget,Math.min(1,dt*7));if(shakePower>0){const shake=Math.min(.20,shakePower*.016);cameraPos[0]+=(Math.random()-.5)*shake;cameraPos[1]+=(Math.random()-.5)*shake;shakePower=Math.max(0,shakePower-dt*20)}setupCam(cameraPos,look,s.fog);drawStage(s,t);
 if(player.hp>0)drawUnit(player,false,t);if(net.inMatch&&net.mode==='coop')for(let r of net.remote.values())if(r.hp>0)drawUnit(r,false,t);
 for(let e of enemies)if(e.hp>0)drawUnit(e,true,t);
 for(let p of projectiles){drawMesh(geometry.ball,locMat(p.x,p.y,p.z,p.r*2.2,p.r*2.2,p.r*2.2),color(p.col),2.4);rod([p.x,p.y,p.z],[p.x-p.vx*.064,p.y-p.vy*.064,p.z-p.vz*.064],p.r*.76,p.col,2.8)}
@@ -499,12 +887,31 @@ for(let p of particles){let k=p.life/p.maxLife;drawMesh(geometry.ball,locMat(p.x
 if(player.specialCd>13){let b=M4();for(let i=0;i<18;i++){let a=i/18*Math.PI*2,x=player.x+Math.cos(a)*5,z=player.z+Math.sin(a)*5;ball(b,x,.18,z,.23,.12,.23,player.frame.light,1.5)}}
 }else{let tt=t*.14,camera=[13+Math.sin(tt)*4.0,8.0+Math.sin(tt*.7)*1.0,17+Math.cos(tt)*3.0];cameraPos=mixvec(cameraPos,camera,Math.min(1,dt*3));setupCam(cameraPos,[0,innerWidth<720?.9:3,0],[.04,.1,.15]);drawHangar(t);let m=selectedFrame();let preview={frame:m,x:0,y:.2,z:0,rot:Math.sin(t*.31)*.51+.19,vx:0,vz:0,hp:1,maxHp:1,anim:t*.4,scale:1.0,model:ONLINE_ENABLED?MODEL_CACHE[m.id]:null};drawUnit(preview,false,t)}
 }
-function gameLoop(now){const dt=clamp((now-lastTime)/1000,0,.05);lastTime=now;gameTime+=dt;if(mode==='battle'&&(renderOK||fallback2d)){updateGame(dt);netTick(dt)};if(renderOK||fallback2d)renderScene(dt,gameTime);requestAnimationFrame(gameLoop)}
+let fpsTimer=0,framesObserved=0,displayFps=60;
+function gameLoop(now){
+ const dt=clamp((now-lastTime)/1000,0,.05);lastTime=now;gameTime+=dt;
+ if(mode==='battle'&&(renderOK||fallback2d)){updateGame(dt);netTick(dt)}
+ for(let r of net.remote.values()){
+  r.renderX=lerp(r.renderX??r.x,r.x,clamp(dt*9,0,1));r.renderZ=lerp(r.renderZ??r.z,r.z,clamp(dt*9,0,1));
+  r.renderRot=smoothAngle(r.renderRot??r.rot,r.rot,dt*11);
+ }
+ if(renderOK||fallback2d)renderScene(dt,gameTime);
+ drawWeather(dt,gameTime);updateEngineTone(dt);
+ comboAge=Math.max(0,comboAge-dt);if(comboAge===0&&comboCount){comboCount=0;$('comboCard')?.classList.remove('visible')}
+ fpsTimer+=dt;framesObserved++;if(fpsTimer>1){displayFps=Math.round(framesObserved/fpsTimer);framesObserved=0;fpsTimer=0;
+ const monitor=$('fpsStatus');if(monitor&&mode==='battle')monitor.textContent=(renderOK?'WEBGL':'CANVAS 2D')+' / '+displayFps+' FPS / '+(visualPrefs.quality==='cinematic'?'HIGH':visualPrefs.quality==='balanced'?'STD':'ECO')}
+ requestAnimationFrame(gameLoop)
+}
 function keyHandler(e,down){if(['Space','Tab','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code)&&mode!=='menu')e.preventDefault();keys[e.code]=down;if(!down)return;if(mode==='battle'){switch(e.code){case 'Digit1':player.weapon=0;updateWeaponHUD();break;case 'Digit2':player.weapon=1;updateWeaponHUD();break;case 'Digit3':player.weapon=2;updateWeaponHUD();break;case 'Tab':case 'KeyQ':switchTarget();break;case 'KeyL':special();break;case 'KeyK':slashAttack(player);break;case 'ShiftLeft':case 'ShiftRight':dash();break;case 'Space':jump();break;case 'KeyP':case 'Escape':togglePause();break}}else if(mode==='paused'&&(['KeyP','Escape'].includes(e.code)))togglePause()}
 window.addEventListener('keydown',e=>{if(e.repeat&&['KeyP','Escape','Tab','KeyQ'].includes(e.code))return;keyHandler(e,true)});window.addEventListener('keyup',e=>keyHandler(e,false));window.addEventListener('blur',()=>{keys=Object.create(null);mouseShoot=false;if(mode==='battle')togglePause()});
 canvas.addEventListener('contextmenu',e=>e.preventDefault());canvas.addEventListener('pointerdown',e=>{if(mode!=='battle')return;initAudio();if(e.button===0)mouseShoot=true;else if(e.button===2){dragging=true;lastMouse={x:e.clientX,y:e.clientY};canvas.setPointerCapture(e.pointerId)}else dragging=true});
 canvas.addEventListener('pointerup',e=>{if(e.button===0)mouseShoot=false;if(e.button===2||dragging)dragging=false});canvas.addEventListener('pointercancel',()=>{mouseShoot=false;dragging=false});
-canvas.addEventListener('pointermove',e=>{if(!dragging||mode!=='battle')return;const dx=e.clientX-lastMouse.x,dy=e.clientY-lastMouse.y;camYaw+=dx*.006;camPitch=clamp(camPitch+dy*.006,-.28,.92);lastMouse={x:e.clientX,y:e.clientY}});
+canvas.addEventListener('pointermove',e=>{if(!dragging||mode!=='battle')return;const dx=e.clientX-lastMouse.x,dy=e.clientY-lastMouse.y;camYaw+=dx*.006*(visualPrefs.sensitivity/100);camPitch=clamp(camPitch+dy*.006*(visualPrefs.sensitivity/100),-.28,.92);lastMouse={x:e.clientX,y:e.clientY}});
+
+canvas.addEventListener('pointerdown',e=>{if(mode!=='battle'||e.pointerType!=='touch')return;e.preventDefault();e.stopImmediatePropagation();dragging=true;lastMouse={x:e.clientX,y:e.clientY};try{canvas.setPointerCapture(e.pointerId)}catch{}},true);
+canvas.addEventListener('pointerup',e=>{if(e.pointerType==='touch')dragging=false},true);
+canvas.addEventListener('pointercancel',e=>{if(e.pointerType==='touch')dragging=false},true);
+
 let joy=$('joystick'),knob=$('joyknob'),joyActive=null;
 function adjustStick(e){let r=joy.getBoundingClientRect(),cx=r.left+r.width/2,cy=r.top+r.height/2,dx=e.clientX-cx,dy=e.clientY-cy,size=r.width*.34,l=Math.max(1,Math.hypot(dx,dy)),k=Math.min(1,size/l);stick.x=clamp(dx*k/size,-1,1);stick.y=clamp(dy*k/size,-1,1);knob.style.transform='translate('+(stick.x*size)+'px,'+(stick.y*size)+'px)'}
 joy.addEventListener('pointerdown',e=>{e.preventDefault();joyActive=e.pointerId;joy.setPointerCapture(e.pointerId);adjustStick(e)});joy.addEventListener('pointermove',e=>{if(e.pointerId===joyActive)adjustStick(e)});for(let ev of ['pointerup','pointercancel','lostpointercapture'])joy.addEventListener(ev,()=>{joyActive=null;stick.x=stick.y=0;knob.style.transform='translate(0,0)'});
@@ -514,8 +921,10 @@ document.querySelectorAll('.mobBtn').forEach(b=>{let act=b.dataset.action;b.addE
    if WebGL is disabled by a device, policy, or its graphics drivers. */
 function drawCanvasMech(ctx,x,y,scale,m,t=0,enemy=false,boss=false){const c=m.body,d=m.trim,l=m.light;
  ctx.save();ctx.translate(x,y);ctx.scale(scale*(boss?1.42:1),scale*(boss?1.42:1));ctx.lineJoin='round';ctx.shadowColor=l;ctx.shadowBlur=3;
- const B=(xx,yy,w,h,fill,stroke='#142434')=>{ctx.fillStyle=fill;ctx.fillRect(xx,yy,w,h);ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.strokeRect(xx,yy,w,h)};
- const poly=(pts,col)=>{ctx.beginPath();ctx.moveTo(...pts[0]);pts.slice(1).forEach(p=>ctx.lineTo(...p));ctx.closePath();ctx.fillStyle=col;ctx.fill();ctx.strokeStyle='#142332';ctx.lineWidth=2;ctx.stroke()};
+ const shadeCol=(hex,k)=>{let h=hex.replace('#','');if(h.length===3)h=h.split('').map(v=>v+v).join('');if(h.length!==6)return hex;const a=[0,2,4].map(i=>parseInt(h.slice(i,i+2),16));return 'rgb('+a.map(n=>Math.round(Math.min(255,Math.max(0,n*k)))).join(',')+')'};
+ const gradient=(fill,y,height)=>{let g=ctx.createLinearGradient(0,y,0,y+height);g.addColorStop(0,shadeCol(fill,1.35));g.addColorStop(.22,shadeCol(fill,1.13));g.addColorStop(.62,fill);g.addColorStop(1,shadeCol(fill,.62));return g};
+ const B=(xx,yy,w,h,fill,stroke='#172525')=>{ctx.fillStyle=gradient(fill,yy,h);ctx.fillRect(xx,yy,w,h);ctx.strokeStyle=stroke;ctx.lineWidth=2;ctx.strokeRect(xx,yy,w,h);ctx.beginPath();ctx.strokeStyle='#ffffff46';ctx.lineWidth=1;ctx.moveTo(xx+2,yy+2);ctx.lineTo(xx+w-3,yy+2);ctx.stroke()};
+ const poly=(pts,col)=>{ctx.beginPath();ctx.moveTo(...pts[0]);pts.slice(1).forEach(p=>ctx.lineTo(...p));ctx.closePath();const y0=Math.min(...pts.map(p=>p[1])),y1=Math.max(...pts.map(p=>p[1]));ctx.fillStyle=gradient(col,y0,Math.max(1,y1-y0));ctx.fill();ctx.strokeStyle='#182d2b';ctx.lineWidth=2;ctx.stroke();ctx.beginPath();ctx.strokeStyle='#ffffff57';ctx.lineWidth=1;ctx.moveTo(...pts[0]);ctx.lineTo(...pts[1]);ctx.stroke()};
  // Hard shadow and armored legs.
  ctx.fillStyle='#09121b99';ctx.beginPath();ctx.ellipse(0,2,72,13,0,0,6.283);ctx.fill();let walk=Math.sin(t*6)*4;
  for(let side of [-1,1]){let sx=side*22,sw=side*walk;B(sx-15,-110+sw,30,78,'#203541');B(sx-20,-109+sw,40,33,c);poly([[sx-23,-76+sw],[sx+18,-76+sw],[sx+22,-24+sw],[sx-20,-24+sw]],c);B(sx-28,-33+sw,52,29,d);B(sx-27,-24+sw,54,21,c);B(sx-15,-124+sw,30,18,'#718895');}
@@ -536,11 +945,59 @@ function drawCanvasMech(ctx,x,y,scale,m,t=0,enemy=false,boss=false){const c=m.bo
  if(m.kind==='binder'||m.kind==='dread'){for(let side of [-1,1])for(let rank=0;rank<2;rank++){poly([[side*(78+rank*21),-286+rank*99],[side*(137+rank*21),-317+rank*60],[side*(164+rank*18),-232+rank*103],[side*(113+rank*22),-158+rank*98]],c);B(side*(119+rank*23)-12,-232+rank*98,24,5,l)}B(-31,-197,62,39,l)}if(m.kind==='titan'){B(-83,-258,44,35,c);B(40,-258,44,35,c);ctx.shadowBlur=15;B(-22,-200,44,35,l);ctx.shadowBlur=0}
  if(m.kind==='predator'){ctx.strokeStyle=c;ctx.lineWidth=15;ctx.beginPath();ctx.moveTo(8,-230);ctx.quadraticCurveTo(75,-380,54,-398);ctx.stroke();B(45,-405,23,23,l)}
  if(m.kind==='heavy')for(let side of [-1,1]){B(side*37-11,-272,23,20,d);B(side*37-7,-270,15,7,l)}
+ // Hand-painted layer: physical articulation, metallic ribs, rivets and panel joints.
+ for(let side of [-1,1]){
+  const sx=side*22;
+  B(sx-10,-122,21,9,'#9da39b');B(sx-11,-88,22,5,d);
+  for(let i=0;i<3;i++)B(sx-9,-70+i*13,18,3,'#5a6a62');
+  B(side*66-9,-166,19,7,'#b6b3a3');B(side*65-9,-151,20,10,c);
+  ctx.strokeStyle='#d3c2a9';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(side*77,-229);ctx.lineTo(side*82,-206);ctx.stroke();
+  for(let yy of [-218,-160,-110]){ctx.fillStyle='#c7bba1';ctx.beginPath();ctx.arc(side*72,yy,2.5,0,6.28);ctx.fill()}
+ }
+ B(-26,-227,52,4,'#d5c7b3');B(-13,-178,26,11,d);
+ for(let i=-1;i<=1;i++){B(i*15-4,-152,9,4,l);B(i*15-4,-240,9,3,'#82918d')}
+ // Lighted optics and stamped serial markings reinforce a crafted scale-model language.
+ ctx.fillStyle='#e5d8b1';ctx.font='700 12px monospace';ctx.textAlign='center';ctx.fillText('S/E',0,-169);
+ if(m.kind==='binder'||m.kind==='dread')for(let side of [-1,1])for(let row=0;row<2;row++){
+  let xx=side*(129+row*21),yy=-238+row*98;
+  for(let j=0;j<4;j++){B(xx-11,yy-29+j*17,19,4,j%2===0?d:l)}
+  ctx.strokeStyle='#c6c2b28a';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(xx-side*22,yy-68);ctx.lineTo(xx-side*2,yy-32);ctx.stroke();
+  B(xx-8,yy+35,16,10,'#4a5d56');B(xx-4,yy+39,8,4,l);
+ }
  if(enemy){ctx.fillStyle='#ff6877';ctx.fillRect(-28,-347,56,5)}
  ctx.restore();}
+
+function drawFallbackLandscape(c,W,H,theme,t){
+ c.save();const rng=seeded(400+theme),mid=H*.41;
+ if([5,6,11,15].includes(theme)){
+  let sky=c.createRadialGradient(W*.76,H*.25,8,W*.76,H*.25,H*.38);
+  sky.addColorStop(0,'#89b3be88');sky.addColorStop(.82,'#49677b29');sky.addColorStop(1,'#49677b00');c.fillStyle=sky;c.beginPath();c.arc(W*.76,H*.25,H*.37,0,6.28);c.fill();
+  c.fillStyle=theme===6?'#8678a6':'#718f9d';c.beginPath();c.arc(W*.76,H*.24,H*.11,0,6.28);c.fill();
+  c.fillStyle=theme===6?'#272341':'#122b40';c.beginPath();c.arc(W*.79,H*.21,H*.11,0,6.28);c.fill();
+  for(let k=0;k<70;k++){let x=rng()*W,y=rng()*H*.55;c.fillStyle='rgba(234,245,234,'+(.15+rng()*.45)+')';c.fillRect(x,y,1.1,1.1)}
+ }
+ if([1,3,7,12].includes(theme)){
+  c.fillStyle=theme===3?'#9cafb3ab':theme===1?'#8e795e88':'#66515e99';
+  for(let i=-2;i<11;i++){const x=i*W/8,h=(.13+rng()*.2)*H;c.beginPath();c.moveTo(x-W/9,mid+70);c.lineTo(x,mid-h);c.lineTo(x+W/9,mid+70);c.closePath();c.fill()}
+ }
+ if([0,2,4,10,13,14].includes(theme)){
+  for(let i=-1;i<17;i++){let x=i*W/15,y=mid+(rng()-.5)*25,h=20+rng()*H*.21;
+   c.fillStyle=theme===4?'#423037d3':'#1c3138ae';c.fillRect(x,y-h,9+rng()*42,h+80);
+   c.fillStyle=theme===2?'#a6bee063':theme===4?'#ea945756':'#8cb89c36';c.fillRect(x+4,y-h+4,4,h*.7);
+  }
+ }
+ if([8,9].includes(theme)){
+  c.fillStyle=theme===8?'#406d7c77':'#314c3677';
+  for(let i=0;i<13;i++){let x=i*W/12+Math.sin(i)*14;let h=30+rng()*H*.14;
+   c.fillRect(x,mid-h,13,h+90);c.beginPath();c.arc(x,mid-h,theme===9?33:17,0,6.28);c.fill()}
+ }
+ c.restore()
+}
+
 function renderFallback2D(dt,t){const c=canvas2d;if(!c)return;const W=canvas.width,H=canvas.height,battle=mode==='battle'||mode==='paused'||mode==='result',stage=STAGES[stageIndex];c.clearRect(0,0,W,H);
- const bg=c.createLinearGradient(0,0,0,H);bg.addColorStop(0,battle?stage.sky:'#061525');bg.addColorStop(.53,battle?stage.soil:'#0a2338');bg.addColorStop(1,battle?stage.ground:'#020812');c.fillStyle=bg;c.fillRect(0,0,W,H);
- if(!battle){c.save();c.strokeStyle='#4db4ec23';c.lineWidth=2;for(let i=-16;i<=16;i++){let x=W*.53+i*50;c.beginPath();c.moveTo(W*.53,H*.55);c.lineTo(x,H);c.stroke()}for(let i=0;i<13;i++){let y=H*.57+i*i*3.1;c.beginPath();c.moveTo(0,y);c.lineTo(W,y);c.stroke()}c.restore();c.shadowBlur=24;c.shadowColor='#3ce1ef';c.strokeStyle='#2ff4ff7b';c.beginPath();c.ellipse(W*.53,H*(W<720?.52:.80),W<720?80:155,W<720?20:38,0,0,6.283);c.stroke();c.shadowBlur=0;let s=Math.min(W/850,H/540)*(W<720?1.25:1.28);drawCanvasMech(c,W*.53,H*(W<720?.52:.78),s,selectedFrame(),t,false);return}
+ const bg=c.createLinearGradient(0,0,0,H);bg.addColorStop(0,battle?stage.sky:'#25413b');bg.addColorStop(.53,battle?stage.soil:'#16372f');bg.addColorStop(1,battle?stage.ground:'#0d1c20');c.fillStyle=bg;c.fillRect(0,0,W,H);
+ if(battle)drawFallbackLandscape(c,W,H,stage.theme,t);
+ if(!battle){c.save();c.strokeStyle='#4db4ec23';c.lineWidth=2;for(let i=-16;i<=16;i++){let x=W*.53+i*50;c.beginPath();c.moveTo(W*.53,H*.55);c.lineTo(x,H);c.stroke()}for(let i=0;i<13;i++){let y=H*.57+i*i*3.1;c.beginPath();c.moveTo(0,y);c.lineTo(W,y);c.stroke()}c.restore();c.shadowBlur=24;c.shadowColor='#3ce1ef';c.strokeStyle='#2ff4ff7b';c.beginPath();c.ellipse(W*.53,H*(W<720?.52:.80),W<720?80:155,W<720?20:38,0,0,6.283);c.stroke();c.shadowBlur=0;let s=Math.min(W/850,H/620)*(W<720?1.25:1.25);drawCanvasMech(c,W*(W<720?.53:.58),H*(W<720?.52:.80),s,selectedFrame(),t,false);return}
 if(!player)return;
 const ppm=Math.min(W,H)/80,centerX=W*.5,centerY=H*.67;
 function proj(x,z,height=0){let dx=x-player.x,dz=z-player.z,forward=dx*Math.sin(camYaw)+dz*Math.cos(camYaw),right=dx*Math.cos(camYaw)-dz*Math.sin(camYaw);return [centerX+right*ppm,centerY-forward*ppm*.68-height*ppm,forward]}
@@ -552,8 +1009,64 @@ for(let p of projectiles){let a=proj(p.x,p.z,p.y),b=proj(p.px,p.pz,p.py);c.lineW
 for(let p of particles){let a=proj(p.x,p.z,p.y);c.fillStyle=`rgba(${Math.round(p.color[0]*255)},${Math.round(p.color[1]*255)},${Math.round(p.color[2]*255)},${p.life/p.maxLife})`;c.beginPath();c.arc(a[0],a[1],Math.max(1,ppm*p.size),0,6.283);c.fill()}
 }
 
+
+/* Settings, pilot feedback, and continuous synthesized propulsion system. */
+function bindVisualSettings(){
+ const map={setQuality:'quality',setAudio:'audio',setWeather:'weather',setShake:'shake',setSensitivity:'sensitivity'};
+ for(const [id,key] of Object.entries(map)){
+  const e=$(id);if(!e)continue;
+  e[e.type==='checkbox'?'checked':'value']=visualPrefs[key];
+  const update=()=>{visualPrefs[key]=e.type==='checkbox'?e.checked:e.type==='range'?+e.value:e.value;
+   if(id==='setQuality'&&renderOK)resize();
+   if(id==='setWeather'&&!visualPrefs.weather&&atmosphereCtx)atmosphereCtx.clearRect(0,0,atmosphereCanvas.width,atmosphereCanvas.height);
+   if(id==='setSensitivity')$('sensitivityValue').textContent=e.value+'%';savePrefs()};
+  e.addEventListener(e.type==='range'?'input':'change',update)
+ }
+ $('sensitivityValue').textContent=visualPrefs.sensitivity+'%';
+ $('settingsToGarage').addEventListener('click',()=>showTab('garage'));
+ $('fullscreenBtn').addEventListener('click',async()=>{try{
+  if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();
+ }catch(e){menuNotify('このブラウザではフルスクリーンを利用できません')}});
+ document.querySelector('[data-action="weapon"]')?.addEventListener('pointerdown',e=>{if(mode!=='battle'||!player)return;player.weapon=(player.weapon+1)%3;updateWeaponHUD();notify('WEAPON / '+['BEAM RIFLE','GATLING','CANNON'][player.weapon])});
+}
+bindVisualSettings();
+const originalAudioSound=sound;
+sound=function(t){if(visualPrefs.audio)originalAudioSound(t)};
+let propulsionOsc=null,propulsionFilter=null,propulsionGain=null,propulsionSub=null;
+function updateEngineTone(dt){
+ if(!audio||!visualPrefs.audio){if(propulsionGain)propulsionGain.gain.setTargetAtTime(0,audio?.currentTime||0,.075);return}
+ try{
+  if(!propulsionOsc){
+   propulsionOsc=audio.createOscillator();propulsionSub=audio.createOscillator();propulsionFilter=audio.createBiquadFilter();propulsionGain=audio.createGain();
+   propulsionOsc.type='sawtooth';propulsionSub.type='triangle';propulsionFilter.type='lowpass';propulsionFilter.frequency.value=150;
+   const subGain=audio.createGain();subGain.gain.value=.38;
+   propulsionOsc.connect(propulsionFilter);propulsionSub.connect(subGain);subGain.connect(propulsionFilter);
+   propulsionFilter.connect(propulsionGain);propulsionGain.connect(audio.destination);propulsionGain.gain.value=0;
+   propulsionOsc.start();propulsionSub.start();
+  }
+  let moving=player?Math.min(1,Math.hypot(player.vx||0,player.vz||0)/25):0;
+  let throttle=mode==='battle'?(player?.dashTime>0?1:moving*.65+.13):0;
+  propulsionOsc.frequency.setTargetAtTime(43+throttle*44,audio.currentTime,.07);
+  propulsionSub.frequency.setTargetAtTime(21+throttle*18,audio.currentTime,.09);
+  propulsionFilter.frequency.setTargetAtTime(135+throttle*330,audio.currentTime,.1);
+  propulsionGain.gain.setTargetAtTime(mode==='battle'?.011+throttle*.027:0,audio.currentTime,.075);
+ }catch(e){console.warn('engine synthesis',e)}
+}
+const originalEnemyDamage=damageEnemy;
+damageEnemy=function(target,amount){
+ const prev=target?.hp??0;originalEnemyDamage(target,amount);
+ if(mode!=='battle'||!target||prev<=0||!player)return;
+ comboCount++;comboAge=2.75;comboDamage+=Math.round(amount);
+ const hit=$('hitCross');if(hit){hit.classList.add('visible');if(hit._timer)clearTimeout(hit._timer);hit._timer=setTimeout(()=>hit.classList.remove('visible'),110)}
+ const card=$('comboCard');if(card&&comboCount>=2){$('comboNumber').textContent=String(comboCount).padStart(2,'0');$('comboDmg').textContent='+'+Math.round(comboDamage).toLocaleString();card.classList.add('visible')}
+ if(prev>0&&target.hp<=0){comboDamage=0;shakePower+=visualPrefs.shake?2:0}
+};
+const originalPlayerDamage=damagePlayer;
+damagePlayer=function(amount){const before=player?.hp??0;originalPlayerDamage(amount);if((player?.hp??0)<before){flashHit(Math.min(1,amount/130));if(player?.hp/player?.maxHp<.22)document.body.classList.add('critical');else document.body.classList.remove('critical')}};
+
 // Initialize once. A copy of this HTML is enough to start with its native 3D frames.
 if(renderOK||fallback2d){createArena(0);showTab('garage');requestAnimationFrame(gameLoop)}else{$('useOnline').checked=false;}
+
 </script>
 </body>
 </html>
